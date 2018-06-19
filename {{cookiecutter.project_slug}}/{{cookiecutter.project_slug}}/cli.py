@@ -69,6 +69,6 @@ def greet(info: Info, string: str, repeat: int, out: TextIO):
     """
     if info.verbose:
         click.echo("'greet' is running in verbose mode.")
-    click.echo('Home directory is {}'.format(info.home_directory))
+        click.echo('Home directory is {}'.format(info.home_directory))
     for _ in range(0, repeat):
         click.echo('Hello {}!'.format(string), file=out)
