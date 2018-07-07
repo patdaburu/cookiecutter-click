@@ -45,7 +45,7 @@ setup(
     [console_scripts]
     {{cookiecutter.project_slug}}={{cookiecutter.project_slug}}.cli:cli
   """,
-  python_requires=">={{cookiecutter.project_version}}",
+  python_requires=">={{cookiecutter.python_version}}",
   license='{{cookiecutter.license}}',
   author='{{cookiecutter.author_name}}',
   author_email='{{cookiecutter.author_email}}',
