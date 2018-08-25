@@ -1,0 +1,12 @@
+{
+	"project_slug": "gc-cli-project",
+	"package_name": "{{ cookiecutter.project_slug|lower|replace(' ', '_')|replace('-', '_')|replace('.', '') }}",
+	"cli_name": "{{cookiecutter.package_name}}",
+	"project_version": "0.0.1",
+	"project_description": "This is my Python command-line app (CLI) project!",
+	"python_version": ["3.6"],
+	"author_name": "Python Developer",
+	"author_email": "you@yourdomain.com",
+	"license": ["None", "MIT"],
+	"github_user": "git_user"
+}

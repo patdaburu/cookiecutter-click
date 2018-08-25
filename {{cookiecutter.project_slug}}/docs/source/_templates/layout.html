@@ -1,0 +1,24 @@
+{% raw %}
+{% extends "!layout.html" %}
+  {% block footer %} {{ super() }}
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #405A0F;
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      /* background: #F5F3E9; */
+    }
+    /* Sidebar text */
+    .wy-menu-vertical a {
+      /* color: #405A0F; */
+    }
+    /* Code Blocks */
+    .rst-content pre.literal-block, .rst-content div[class^='highlight'] pre, .rst-content .linenodiv pre {
+        line-height: 1.6;
+    }
+  </style>
+{% endblock %}
+{% endraw %}

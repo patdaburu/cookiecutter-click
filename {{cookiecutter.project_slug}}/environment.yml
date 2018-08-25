@@ -1,0 +1,3 @@
+name: {{cookiecutter.package_name}}
+dependencies:
+        - python={{cookiecutter.python_version}}
