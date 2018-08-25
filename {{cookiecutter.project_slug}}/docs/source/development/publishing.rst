@@ -21,16 +21,4 @@ Installing
 ==========
 
 If you just need to install the library in your project, have a look at
-the :ref:`general tutorial <getting-started>` and the :ref:`pip.conf <pip>` article.
-
-
-
-
-
-
-
-
-
-
-
-
+the :ref:`general tutorial <getting-started>` article.
