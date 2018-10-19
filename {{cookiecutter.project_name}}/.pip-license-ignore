@@ -1,4 +1,4 @@
-{{cookiecutter.project_slug}}
+{{cookiecutter.package_name}}
 attrs
 attrs
 certifi

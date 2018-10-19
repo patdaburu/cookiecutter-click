@@ -69,7 +69,7 @@ Would you like to learn more?  Check out the links below!
 
 * **Pat Daburu** - *Initial work* - [github](https://github.com/patdaburu)
 
-See also the list of [contributors](https://github.com/patdaburu/cookiecutter-gc-cli/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/patdaburu/cookiecutter-click/graphs/contributors) who participated in this project.
 
 ## License
 

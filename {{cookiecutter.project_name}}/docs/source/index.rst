@@ -4,7 +4,7 @@
 
 .. image:: _static/images/logo.svg
    :width: 150px
-   :alt: {{cookiecutter.project_slug}}
+   :alt: {{cookiecutter.package_name}}
    :align: right
 
 {{cookiecutter.package_name}}

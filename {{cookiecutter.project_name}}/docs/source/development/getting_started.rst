@@ -19,12 +19,12 @@ steps from top to bottom you should be ready to roll by the end.
 Get the Source
 ==============
 
-The source code for the `{{cookiecutter.project_slug}}` project lives at
-`github <https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_slug}}>`_.  You can use `git clone` to get it.
+The source code for the `{{cookiecutter.package_name}}` project lives at
+`github <https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.package_name}}>`_.  You can use `git clone` to get it.
 
 .. code-block:: bash
 
-   git clone https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_slug}}
+   git clone https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.package_name}}
 
 Create the Virtual Environment
 ==============================

@@ -2,8 +2,7 @@
 .PHONY: build publish package coverage test lint docs venv
 PROJ_SLUG = {{cookiecutter.package_name}}
 CLI_NAME = {{cookiecutter.cli_name}}
-PY_VERSION = 3.6
-GEMFURY = ~/.gemfury
+PY_VERSION = {{cookiecutter.python_version}}
 
 GREEN = 2
 RED = 1
@@ -33,6 +32,9 @@ lint:
 test: lint
 	py.test --cov-report term --cov=$(PROJ_SLUG) tests/
 
+quicktest:
+	py.test --cov-report term --cov=$(PROJ_SLUG) tests/
+
 coverage: lint
 	py.test --cov-report html --cov=$(PROJ_SLUG) tests/
 
@@ -45,11 +47,15 @@ answers:
 	cd docs && $(MAKE) html
 	xdg-open docs/build/html/index.html
 
+answers:
+	cd docs && $(MAKE) html
+	xdg-open docs/build/html/index.html
+
 package: clean docs
 	python setup.py sdist
 
-publish: gemfury_exists package
-	curl -F package=@$(shell ls dist/* | head -1) $(shell cat $(GEMFURY) | head -1)
+publish: package
+	twine upload dist/*
 
 clean :
 	rm -rf dist \
@@ -61,6 +67,10 @@ venv :
 	virtualenv --python python$(PY_VERSION) venv
 	@echo
 	@echo To activate the environment, use the following command:
+	@echo
+	$(call colorecho, $(GREEN), "source venv/bin/activate")
+	@echo
+	@echo Once activated, you can use the 'install' target to install dependencies:
 	@echo
 	$(call colorecho, $(GREEN), "source venv/bin/activate")
 

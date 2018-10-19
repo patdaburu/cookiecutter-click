@@ -1,12 +1,12 @@
 {
-	"project_slug": "gc-cli-project",
-	"package_name": "{{ cookiecutter.project_slug|lower|replace(' ', '_')|replace('-', '_')|replace('.', '') }}",
-	"cli_name": "{{cookiecutter.package_name}}",
+	"project_name": "my_click_project",
+	"package_name": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') }}",
+	"cli_name": "{{ cookiecutter.package_name }}",
 	"project_version": "0.0.1",
-	"project_description": "This is my Python command-line app (CLI) project!",
+	"project_description": "This is my click command-line app project.",
 	"python_version": ["3.6"],
-	"author_name": "Python Developer",
-	"author_email": "you@yourdomain.com",
+	"author_name": "my_name",
+	"author_email": "my_email",
 	"license": ["None", "MIT"],
-	"github_user": "git_user"
+	"github_user": "my_github_user"
 }
