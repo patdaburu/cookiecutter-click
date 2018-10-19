@@ -9,4 +9,5 @@ omit =
     scratch*.py
 
 [html]
-directory=./docs/build/html/coverage
+directory=./htmlcov
+

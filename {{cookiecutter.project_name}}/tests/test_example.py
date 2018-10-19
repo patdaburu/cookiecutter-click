@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-.. currentmodule:: test_example.py
+.. currentmodule:: test_example
 .. moduleauthor:: {{cookiecutter.author_name}} <{{cookiecutter.author_email}}>
 
 This is a sample test module.
@@ -10,10 +10,10 @@ This is a sample test module.
 
 from parameterized import parameterized
 import unittest
-import {{cookiecutter.project_slug}}
+import {{cookiecutter.package_name}}
 
 
-class ExampleTestSuite(unittest.TestCase):
+class ExampleTestCase(unittest.TestCase):
     """
     This is just an example test suite.  It will check the current project version
     numbers against the original version numbers and will start failing as soon as
@@ -25,11 +25,11 @@ class ExampleTestSuite(unittest.TestCase):
         Act: Retrieve the versions.
         Assert: The versions match the version numbers at the time of project creation.
         """
-        self.assertEqual('{{cookiecutter.project_version}}', {{cookiecutter.project_slug}}.__version__)
-        self.assertEqual('{{cookiecutter.project_version}}', {{cookiecutter.project_slug}}.__release__)
+        self.assertEqual('0.0.1', {{cookiecutter.package_name}}.__version__)
+        self.assertEqual('0.0.1', {{cookiecutter.package_name}}.__release__)
 
 
-class ParamaterizedExampleTestSuite(unittest.TestCase):
+class ParamaterizedExampleTestCase(unittest.TestCase):
     """
     This is just an example test suite that demonstrates the very useful
     `parameterized` module.  It contains a test in which the squares of the

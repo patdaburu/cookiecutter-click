@@ -1,6 +1,7 @@
 {
 	"project_name": "my_click_project",
-	"project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') }}",
+	"package_name": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') }}",
+	"cli_name": "{{ cookiecutter.package_name }}",
 	"project_version": "0.0.1",
 	"project_description": "This is my click command-line app project.",
 	"python_version": ["3.6"],
@@ -9,4 +10,3 @@
 	"license": ["None", "MIT"],
 	"github_user": "my_github_user"
 }
-

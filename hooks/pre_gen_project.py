@@ -9,11 +9,11 @@ This is the script that runs before template generation.
 """
 import re
 import sys
-
+from cookiecutter.main import cookiecutter
 
 MODULE_REGEX = r'^[_a-zA-Z][_a-zA-Z0-9]+$'
 
-module_name = '{{ cookiecutter.project_slug }}'
+module_name = '{{ cookiecutter.package_name }}'
 
 if not re.match(MODULE_REGEX, module_name):
     print('ERROR: %s is not a valid Python module name!' % module_name)
