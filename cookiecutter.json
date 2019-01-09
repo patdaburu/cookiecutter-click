@@ -1,5 +1,5 @@
 {
-	"project_name": "my_click_project",
+	"project_name": "my-click-project",
 	"package_name": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') }}",
 	"cli_name": "{{ cookiecutter.package_name }}",
 	"project_version": "0.0.1",
