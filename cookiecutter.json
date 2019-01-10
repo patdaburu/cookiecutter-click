@@ -1,10 +1,10 @@
 {
-	"project_name": "my_click_project",
+	"project_name": "my-click-project",
 	"package_name": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') }}",
 	"cli_name": "{{ cookiecutter.package_name }}",
 	"project_version": "0.0.1",
 	"project_description": "This is my click command-line app project.",
-	"python_version": ["3.6"],
+	"python_version": ["3.6", "3.7"],
 	"author_name": "my_name",
 	"author_email": "my_email",
 	"license": ["None", "MIT"],

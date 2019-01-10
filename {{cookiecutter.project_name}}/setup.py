@@ -10,7 +10,7 @@ This file is used to create the package we'll publish to PyPI.
 
 import os
 import {{cookiecutter.package_name}}
-from setuptools import setup, find_packages, Command  # Prefer setuptools over distutils.
+from setuptools import setup, find_packages, Command
 from codecs import open  # Use a consistent encoding.
 from os import path
 
@@ -21,25 +21,29 @@ with open(path.join(here, 'README'), encoding='utf-8') as f:
     long_description = f.read()
 
 # Get the base version from the library.
-version={{cookiecutter.package_name}}.__version__
+version={{cookiecutter.package_name}}.version.__version__
 
 # If the environment has a build number set...
 if os.getenv('buildnum') is not None:
     # ...append it to the version.
-    version = "{version}.{buildnum}".format(version=version, buildnum=os.getenv('buildnum'))
+    version = "{version}.{buildnum}".format(
+        version=version,
+        buildnum=os.getenv('buildnum')
+    )
 
 setup(
     name='{{cookiecutter.package_name}}',
     description="{{cookiecutter.project_description}}",
     long_description=long_description,
-    packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
-    version=version,
-    install_requires=[
-    # Include your dependencies here.
-    # Here are a couple of examples...
-    # 'numpy>=1.13.3,<2',
-    # 'measurement>=1.8.0,<2'
-    'click>=6.7,<7'
+    packages=find_packages(
+        exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
+        version=version,
+        install_requires=[
+        # Include your dependencies here.
+        # Here are a couple of examples...
+        # 'numpy>=1.13.3,<2',
+        # 'measurement>=1.8.0,<2'
+        'click>=7.0,<8'
   ],
   entry_points="""
     [console_scripts]
@@ -51,8 +55,10 @@ setup(
     author_email='{{cookiecutter.author_email}}',
     # Use the URL to the github repo.
     url='https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.package_name}}',
-    download_url=f'https://github.com/{{cookiecutter.github_user}}/'
-               f'{{cookiecutter.package_name}}/archive/{version}.tar.gz',
+    download_url=(
+        f'https://github.com/{{cookiecutter.github_user}}/'
+        f'{{cookiecutter.package_name}}/archive/{version}.tar.gz'
+    ),
     keywords=[
         # Add package keywords here.
     ],
