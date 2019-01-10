@@ -7,40 +7,41 @@
 
 This is a sample test module.
 """
-
-from parameterized import parameterized
-import unittest
+import pytest
 import {{cookiecutter.package_name}}
 
 
-class ExampleTestCase(unittest.TestCase):
+"""
+This is just an example test suite.  It will check the current project version
+numbers against the original version numbers and will start failing as soon as
+the current version numbers change.
+"""
+def test_import_getVersions_originalVersions():
     """
-    This is just an example test suite.  It will check the current project version
-    numbers against the original version numbers and will start failing as soon as
-    the current version numbers change.
+    Arrange: Load the primary module.
+    Act: Retrieve the versions.
+    Assert: The versions match the version numbers at the time of project creation.
     """
-    def test_import_getVersions_originalVersions(self):
-        """
-        Arrange: Load the primary module.
-        Act: Retrieve the versions.
-        Assert: The versions match the version numbers at the time of project creation.
-        """
-        self.assertEqual('0.0.1', {{cookiecutter.package_name}}.__version__)
-        self.assertEqual('0.0.1', {{cookiecutter.package_name}}.__release__)
+    assert(
+        '0.0.1' == {{cookiecutter.package_name}}.__version__,
+        "This test is expected to fail when the version increments. "
+        "It is here only as an example and you can remove it."
+    )
 
-
-class ParamaterizedExampleTestCase(unittest.TestCase):
     """
     This is just an example test suite that demonstrates the very useful
     `parameterized` module.  It contains a test in which the squares of the
     first two parameters are added together and passes if that sum equals the
     third parameter.
     """
-    @parameterized.expand([
-        (1, 2, 5),
-        (3, 4, 25)
-    ])
-    def test_ab_addSquares_equalsC(self, a, b, c):
+    @pytest.mark.parametrize(
+        "a,b,c",
+        [
+            (1, 2, 5),
+            (3, 4, 25)
+        ]
+    )
+    def test_ab_addSquares_equalsC(a, b, c):
         """
         Arrange: Acquire the first two parameters (a and b).
         Act: Add the squares of the first two parameters (a and b).
@@ -50,4 +51,8 @@ class ParamaterizedExampleTestCase(unittest.TestCase):
         :param b: the second parameter
         :param c: the result of adding the squares of a and b
         """
-        self.assertEqual(c, a*a + b*b)
+        assert (
+            a*a + b*b == c,
+            "'c' should be the sum of the squares of 'a' and 'b'. "
+            "This is an example test and can be removed."
+        )
