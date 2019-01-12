@@ -16,44 +16,34 @@ from {{cookiecutter.package_name}} import __version__
 # To learn more about testing Click applications, visit the link below.
 # http://click.pocoo.org/5/testing/
 
-"""
-This case contains tests of the command-line interface (CLI).
-"""
-def test_version_displaysLibraryVersion():
+def test_version_displays_library_version():
     """
     Arrange/Act: Run the `version` subcommand.
     Assert: The output matches the library version.
     """
     runner: CliRunner = CliRunner()
     result: Result = runner.invoke(cli.cli, ['version'])
-    assert (
-        __version__ in result.output.strip(),
+    assert __version__ in result.output.strip(), \
         'Version number should match library version.'
-    )
 
-def test_verbose_outputVerbose():
+
+def test_verbose_output():
     """
     Arrange/Act: Run the `version` subcommand with the '-v' flag.
     Assert: The output indicates verbose logging is enabled.
     """
     runner: CliRunner = CliRunner()
     result: Result = runner.invoke(cli.cli, ['-v', 'version'])
-    assert (
-        'Verbose' in result.output.strip(),
+    assert 'Verbose' in result.output.strip(), \
         'Verbose logging should be indicated in output.'
-    )
 
-def test_hello_displaysExpectedMessage():
+
+def test_hello_displays_expected_message():
     """
     Arrange/Act: Run the `version` subcommand.
     Assert:  The output matches the library version.
     """
     runner: CliRunner = CliRunner()
     result: Result = runner.invoke(cli.cli, ['hello'])
-    assert (
-        '{{cookiecutter.cli_name}}' in result.output.strip(),
+    assert '{{cookiecutter.cli_name}}' in result.output.strip(), \
         "'Hello' messages should contain the CLI name."
-    )
-
-if __name__ == '__main__':
-    unittest.main()
