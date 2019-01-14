@@ -37,15 +37,15 @@ setup(
     long_description=long_description,
     packages=find_packages(
         exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
-        version=version,
-        install_requires=[
+    version=version,
+    install_requires=[
         # Include your dependencies here.
         # Here are a couple of examples...
         # 'numpy>=1.13.3,<2',
         # 'measurement>=1.8.0,<2'
         'click>=7.0,<8'
-  ],
-  entry_points="""
+    ],
+    entry_points="""
     [console_scripts]
     {{cookiecutter.cli_name}}={{cookiecutter.package_name}}.cli:cli
     """,
