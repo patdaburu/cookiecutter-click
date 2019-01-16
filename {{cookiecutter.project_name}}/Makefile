@@ -42,6 +42,7 @@ docs: coverage
 	mkdir -p docs/source/_static
 	mkdir -p docs/source/_templates
 	cd docs && $(MAKE) html
+	pandoc --from=markdown --to=rst --output=README.rst README.md
 
 answers:
 	cd docs && $(MAKE) html
