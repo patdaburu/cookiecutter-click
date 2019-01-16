@@ -12,17 +12,8 @@
 Getting Started
 ***************
 
-Prerequisites
-=============
-
-GDAL/OGR
---------
-
-You will need to have `GDAL/OGR <http://www.gdal.org/>`_ installed.
-
-
 Installing the Library
-----------------------
+======================
 
 You can use pip to install `{{cookiecutter.package_name}}`.
 
