@@ -8,8 +8,9 @@
 This file is used to create the package we'll publish to PyPI.
 """
 
+import importlib.util
 import os
-import {{cookiecutter.package_name}}
+from pathlib import Path
 from setuptools import setup, find_packages, Command
 from codecs import open  # Use a consistent encoding.
 from os import path
@@ -20,8 +21,15 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
-# Get the base version from the library.
-version={{cookiecutter.package_name}}.version.__version__
+# Get the base version from the library.  (We'll find it in the `version.py`
+# file in the src directory, but we'll bypass actually loading up the library.)
+vspec = importlib.util.spec_from_file_location(
+  "version",
+  str(Path(__file__).resolve().parent / '{{cookiecutter.package_name}}' / "version.py")
+)
+vmod = importlib.util.module_from_spec(vspec)
+vspec.loader.exec_module(vmod)
+version = getattr(vmod, '__version__')
 
 # If the environment has a build number set...
 if os.getenv('buildnum') is not None:
