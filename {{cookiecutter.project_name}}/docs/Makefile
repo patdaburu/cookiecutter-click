@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = djio
+SPHINXPROJ    = {{cookiecutter.package_name}}
 SOURCEDIR     = source
 BUILDDIR      = build
 

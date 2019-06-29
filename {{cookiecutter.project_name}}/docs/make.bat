@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=source
 set BUILDDIR=build
-set SPHINXPROJ=djio
+set SPHINXPROJ={{cookiecutter.package_name}}
 
 if "%1" == "" goto help
 
