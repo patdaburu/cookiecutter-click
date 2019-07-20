@@ -37,10 +37,9 @@ remote: Compressing objects: 100% (310/310), done.
 remote: Total 550 (delta 283), reused 479 (delta 222)
 Receiving objects: 100% (550/550), 127.66 KiB | 58 KiB/s, done.
 Resolving deltas: 100% (283/283), done.
-project_name [Project Name]: Reddit CLI
-package_name [reddit_clone]: reddit_cli
-cli_name [Vlad Doster]: Vlad Doster
-email [you@example.com]: mvdoster@gmail.com
+project_name [my-click-project]: Reddit CLI
+package_name [my-click-project]: reddit_cli
+cli_name [my_click_project]: Vlad Doster
 project_version [0.0.1]: 0.0.1
 project_description [This is my click command-line app]: Browse Reddit from a cli tool!
 Select python_version:
