@@ -39,7 +39,7 @@ Receiving objects: 100% (550/550), 127.66 KiB | 58 KiB/s, done.
 Resolving deltas: 100% (283/283), done.
 project_name [my-click-project]: Reddit CLI
 package_name [my-click-project]: reddit_cli
-cli_name [my_click_project]: Vlad Doster
+cli_name [my_click_project]: reddit_cli
 project_version [0.0.1]: 0.0.1
 project_description [This is my click command-line app]: Browse Reddit from a cli tool!
 Select python_version:
