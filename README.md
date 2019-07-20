@@ -6,9 +6,9 @@ This is a [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) templat
 
 The project you create from this template has a few features to be aware of including:
 
-* a [click](http://click.pocoo.org/5/) application to get you going;
-* [pytest](https://docs.pytest.org/en/latest/) unit tests; and
-* a documentation project based on [Sphinx](http://www.sphinx-doc.org/en/master/usage/quickstart.html).
+* A [click](http://click.pocoo.org/5/) application to get you going
+* [Pytest](https://docs.pytest.org/en/latest/) unit tests
+* A documentation project based on [Sphinx](http://www.sphinx-doc.org/en/master/usage/quickstart.html).
 
 ## Getting Started
 
