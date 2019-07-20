@@ -2,24 +2,76 @@
 
 This is a [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) template designed to help you get started with your [command-line interface (CLI)](http://click.pocoo.org/5/) project.
 
+## Project Features
+
+The project you create from this template has a few features to be aware of including:
+
+* A [click](http://click.pocoo.org/5/) application to get you going
+* [Pytest](https://docs.pytest.org/en/latest/) unit tests
+* A documentation project based on [Sphinx](http://www.sphinx-doc.org/en/master/usage/quickstart.html).
+
 ## Getting Started
 
-### Prerequisites
+### Usage
 
-What things you need to install the software and how to install them
+Let's pretend you want to create a CLI tool called "redditcli". Rather than using standard lib argparse and then editing mundane details to include your basic cli tool configuration that always get forgotten until the worst possible moment, get cookiecutter to do all the work.
 
-```bash
-pip install cookiecutter
+First, get Cookiecutter. Trust me, it's awesome:
+
+`$ pip install "cookiecutter>=1.4.0"`
+
+Now run it against this repo:
+
+`$ cookiecutter https://github.com/patdaburu/cookiecutter-click`
+
+You'll be prompted for some values. Provide them, then a cli tool will be created for you.
+
+Warning: After this point, change 'Vlad Doster', 'vladdoster', etc to your own information.
+
+Answer the prompts with your own desired options. For example:
+
+```
+Cloning into 'cookiecutter-click'...
+remote: Counting objects: 550, done.
+remote: Compressing objects: 100% (310/310), done.
+remote: Total 550 (delta 283), reused 479 (delta 222)
+Receiving objects: 100% (550/550), 127.66 KiB | 58 KiB/s, done.
+Resolving deltas: 100% (283/283), done.
+project_name [my-click-project]: Reddit CLI
+package_name [my-click-project]: reddit_cli
+cli_name [my_click_project]: reddit-cli
+project_version [0.0.1]: 0.0.1
+project_description [This is my click command-line app]: Browse Reddit from a cli tool!
+Select python_version:
+1 - 3.6
+2 - 3.7
+Choose from 1, 2 [1]: 1
+author_name [my_name]: Vlad Doster
+author_email [my_email]: mvdoster@gmail.com
+Select license:
+1 - None
+2 - MIT
+Choose from 1,2 (1, 2) [1]: 1
+github_user [my_github_user]: vladdoster
 ```
 
-### Using the Template
+Enter the project and take a look around:
 
-#### Step One: Build the project.
-You can build a project directly from the github repository.
-
-```bash
-cookiecutter https://github.com/patdaburu/cookiecutter-click
 ```
+$ cd reddit_cli/
+$ source venv/bin/activate
+$ reddit_cli --help
+$ ls
+```
+
+Create a git repo and push it there:
+```
+$ git init
+$ git add .
+$ git commit -m "first awesome commit"
+$ git remote add origin git@github.com:vladdoster/reddit_cli.git
+$ git push -u origin master
+```  
 
 #### Run the `make` Targets
 
@@ -45,14 +97,6 @@ If you have performed the steps above, you should now be able to run the applica
 ```
 
 If you get the template help message, you're ready to start building.
-
-## Project Features
-
-The project you create from this template has a few features to be aware of including:
-
-* a [click](http://click.pocoo.org/5/) application to get you going;
-* [pytest](https://docs.pytest.org/en/latest/) unit tests; and
-* a documentation project based on [Sphinx](http://www.sphinx-doc.org/en/master/usage/quickstart.html).
 
 ## Resources
 
