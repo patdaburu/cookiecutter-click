@@ -1,5 +1,19 @@
 #!/usr/bin/env bash
-make venv && source venv/bin/activate && make install && make build
+
+if ! make venv; then
+    echo ""
+    echo -e "\e[1m\e[31mCannot create the virtual environment.\e[0m"
+    echo ""
+    echo -e "\e[1mIs python version {{cookiecutter.python_version}} installed?\e[0m"
+    echo ""
+    echo -e "\033[1m\033[4mNext Steps\033[0m"
+    echo -e "Install python version {{cookiecutter.python_version}}."
+    echo -e "Run cookiecutter again."
+    echo ""
+    exit 1
+else
+    source venv/bin/activate && make install && make build
+fi
 
 cat << "PYTHON"
                  .-------------------------.
