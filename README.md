@@ -49,9 +49,12 @@ Choose from 1, 2 [1]: 1
 author_name [my_name]: Vlad Doster
 author_email [my_email]: mvdoster@gmail.com
 Select license:
-1 - None
-2 - MIT
-Choose from 1,2 (1, 2) [1]: 1
+1 - MIT
+2 - BSD
+3 - GPLv3
+4 - Apache Software License 2.0
+5 - Not open source
+Choose from 1,2 (1, 2, 3, 4, 5) [1]: 1
 github_user [my_github_user]: vladdoster
 ```
 
@@ -114,8 +117,4 @@ Would you like to learn more?  Check out the links below!
 * **Pat Daburu** - *Initial work* - [github](https://github.com/patdaburu)
 
 See also the list of [contributors](https://github.com/patdaburu/cookiecutter-click/graphs/contributors) who participated in this project.
-
-## License
-
-All rights reserved.
 
