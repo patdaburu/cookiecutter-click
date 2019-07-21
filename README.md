@@ -118,7 +118,3 @@ Would you like to learn more?  Check out the links below!
 
 See also the list of [contributors](https://github.com/patdaburu/cookiecutter-click/graphs/contributors) who participated in this project.
 
-## License
-
-All rights reserved.
-
