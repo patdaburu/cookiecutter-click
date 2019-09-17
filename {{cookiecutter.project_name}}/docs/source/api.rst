@@ -1,9 +1,4 @@
-.. _api-doc:
-
-.. image:: _static/images/logo.svg
-   :width: 150px
-   :alt: {{cookiecutter.package_name}}
-   :align: right
+.. _api:
 
 .. toctree::
     :glob:
