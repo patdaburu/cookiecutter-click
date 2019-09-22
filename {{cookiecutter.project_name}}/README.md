@@ -4,7 +4,7 @@
 
 ## Project Features
 
-* [{{cookiecutter.package_name}}](http://www.comingsoon.net)
+* [{{cookiecutter.package_name}}](http://{{cookiecutter.project_name}}.readthedocs.io/)
 * a starter [Click](http://click.pocoo.org/5/) command-line application
 * automated unit tests you can run with [pytest](https://docs.pytest.org/en/latest/)
 * a [Sphinx](http://www.sphinx-doc.org/en/master/) documentation project
