@@ -22,6 +22,3 @@ jobs:
 #      run: |
 #        python -m cookiecutter
 #    - name: Test project
-    - name: CI finished
-      run: |
-        echo CI pipeline finished
