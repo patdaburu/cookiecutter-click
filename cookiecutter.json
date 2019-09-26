@@ -9,6 +9,10 @@
     "3.7",
     "3.8"
   ],
+  "sphinx_theme": [
+    "alabaster",
+    "readthedocs"
+  ],
   "author_name": "my_name",
   "author_email": "my_email@gmail.com",
   "license": [
@@ -16,7 +20,7 @@
     "BSD",
     "GPLv3",
     "Apache Software License 2.0",
-    "Not open source"
+    "None"
   ],
   "github_user": "my_github_username"
 }

@@ -56,7 +56,7 @@ setup(
     {{cookiecutter.cli_name}}={{cookiecutter.package_name}}.cli:cli
     """,
     python_requires=">={{cookiecutter.project_version}}",
-    license={% if cookiecutter.license != "Geo-Comm" %}'{{cookiecutter.license}}'{% else %}None{% endif %},
+    license={% if cookiecutter.license != "None" %}'{{cookiecutter.license}}'{% else %}None{% endif %},
     author='{{cookiecutter.author_name}}',
     author_email='{{cookiecutter.author_email}}',
     # Use the URL to the github repo.
