@@ -2,62 +2,27 @@ import os
 import re
 
 import pytest
-from cookiecutter.exceptions import FailedHookException
-from pytest_cases import pytest_fixture_plus
 import sh
-import yaml
 from binaryornot.check import is_binary
 
 PATTERN = r"{{(\s?cookiecutter)[.](.*?)}}"
 RE_OBJ = re.compile(PATTERN)
 
-YN_CHOICES = ["y", "n"]
-CLOUD_CHOICES = ["AWS", "GCE", "None"]
-
 
 @pytest.fixture
 def context():
     return {
-        "project_name": "My Test Project",
-        "project_slug": "my_test_project",
-        "author_name": "Test Author",
-        "email": "test@example.com",
-        "description": "A short description of the project.",
-        "domain_name": "example.com",
-        "version": "0.1.0",
-        "timezone": "UTC",
-    }
-
-
-@pytest_fixture_plus
-@pytest.mark.parametrize("windows", YN_CHOICES, ids=lambda yn: f"win:{yn}")
-@pytest.mark.parametrize("use_docker", YN_CHOICES, ids=lambda yn: f"docker:{yn}")
-@pytest.mark.parametrize("use_celery", YN_CHOICES, ids=lambda yn: f"celery:{yn}")
-@pytest.mark.parametrize("use_mailhog", YN_CHOICES, ids=lambda yn: f"mailhog:{yn}")
-@pytest.mark.parametrize("use_sentry", YN_CHOICES, ids=lambda yn: f"sentry:{yn}")
-@pytest.mark.parametrize("use_compressor", YN_CHOICES, ids=lambda yn: f"cmpr:{yn}")
-@pytest.mark.parametrize("use_whitenoise", YN_CHOICES, ids=lambda yn: f"wnoise:{yn}")
-@pytest.mark.parametrize("cloud_provider", CLOUD_CHOICES, ids=lambda yn: f"cloud:{yn}")
-def context_combination(
-    windows,
-    use_docker,
-    use_celery,
-    use_mailhog,
-    use_sentry,
-    use_compressor,
-    use_whitenoise,
-    cloud_provider,
-):
-    """Fixture that parametrize the function where it's used."""
-    return {
-        "windows": windows,
-        "use_docker": use_docker,
-        "use_compressor": use_compressor,
-        "use_celery": use_celery,
-        "use_mailhog": use_mailhog,
-        "use_sentry": use_sentry,
-        "use_whitenoise": use_whitenoise,
-        "cloud_provider": cloud_provider,
+        "project_name": "my_click_project",
+        "package_name": "click_project",
+        "cli_name": "click_project",
+        "project_version": "0.0.1",
+        "project_description": "A click command-line app.",
+        "python_version": "3.7",
+        "sphinx_theme": "alabaster",
+        "author_name": "my_name",
+        "author_email": "my_email@gmail.com",
+        "license": "MIT",
+        "github_user": "my_github_username",
     }
 
 
@@ -79,65 +44,49 @@ def check_paths(paths):
         if is_binary(path):
             continue
 
-        for line in open(path, "r"):
-            match = RE_OBJ.search(line)
+        for line in open(path, "rb"):
+            match = RE_OBJ.search(str(line))
             msg = "cookiecutter variable not replaced in {}"
             assert match is None, msg.format(path)
 
 
-def test_project_generation(cookies, context, context_combination):
+def test_project_generation(cookies, context):
     """
     Test that project is generated and fully rendered.
-
-    This is parametrized for each combination from ``context_combination`` fixture
     """
-    result = cookies.bake(extra_context={**context, **context_combination})
+    result = cookies.bake(context)
     assert result.exit_code == 0
     assert result.exception is None
     assert result.project.basename == context["project_name"]
     assert result.project.isdir()
-
     paths = build_files_list(str(result.project))
     assert paths
     check_paths(paths)
 
 
 @pytest.mark.flake8
-def test_flake8_passes(cookies, context_combination):
+def test_flake8_passes(cookies, context):
     """
     Generated project should pass flake8.
-
-    This is parametrized for each combination from ``context_combination`` fixture
     """
-    result = cookies.bake(extra_context=context_combination)
+    result = cookies.bake()
 
     try:
-        sh.flake8(str(result.project))
+        sh.flake8("--config=.flake8", str(result.project))
     except sh.ErrorReturnCode as e:
         pytest.fail(e)
 
 
 @pytest.mark.black
-def test_black_passes(cookies, context_combination):
+def test_black_passes(cookies):
     """
     Generated project should pass black.
-
-    This is parametrized for each combination from ``context_combination`` fixture
     """
-    result = cookies.bake(extra_context=context_combination)
+    result = cookies.bake()
 
     try:
-        sh.black("--check", "--diff", "--exclude", "migrations", f"{result.project}/")
+        sh.black("--verbose", "--check", "--diff",
+                 "--exclude", 'venv|docs/source/conf.py|setup.py',
+                 str(result.project))
     except sh.ErrorReturnCode as e:
         pytest.fail(e)
-
-
-@pytest.mark.parametrize("slug", ["project slug", "Project_Slug"])
-def test_invalid_slug(cookies, context, slug):
-    """Invalid slug should failed pre-generation hook."""
-    context.update({"project_slug": slug})
-
-    result = cookies.bake(extra_context=context)
-
-    assert result.exit_code != 0
-    assert isinstance(result.exception, FailedHookException)

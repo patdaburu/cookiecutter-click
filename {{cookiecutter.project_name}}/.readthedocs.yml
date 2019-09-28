@@ -1,9 +1,9 @@
 build:
-    image: latest
+  image: latest
 
 python:
-    version: {{cookiecutter.python_version}}
-    setup_py_install: true
+  version: {{cookiecutter.python_version}}
+  setup_py_install: true
 
 conda:
-    file: environment.yml
+  file: environment.yml
