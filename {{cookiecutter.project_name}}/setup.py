@@ -11,7 +11,7 @@ This file is used to create the package we'll publish to PyPI.
 import importlib.util
 import os
 from pathlib import Path
-from setuptools import setup, find_packages, Command
+from setuptools import setup, find_packages
 from codecs import open  # Use a consistent encoding.
 from os import path
 
@@ -25,7 +25,8 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 # file in the src directory, but we'll bypass actually loading up the library.)
 vspec = importlib.util.spec_from_file_location(
   "version",
-  str(Path(__file__).resolve().parent / '{{cookiecutter.package_name}}' / "version.py")
+  str(Path(__file__).resolve().parent /
+      '{{cookiecutter.package_name}}'/"version.py")
 )
 vmod = importlib.util.module_from_spec(vspec)
 vspec.loader.exec_module(vmod)
@@ -47,10 +48,7 @@ setup(
         exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     version=version,
     install_requires=[
-        # Include your dependencies here.
-        # Here are a couple of examples...
-        # 'numpy>=1.13.3,<2',
-        # 'measurement>=1.8.0,<2'
+        # Include dependencies here
         'click>=7.0,<8'
     ],
     entry_points="""
@@ -62,7 +60,7 @@ setup(
     author='{{cookiecutter.author_name}}',
     author_email='{{cookiecutter.author_email}}',
     # Use the URL to the github repo.
-    url='https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.package_name}}',
+    url= 'https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.package_name}}',
     download_url=(
         f'https://github.com/{{cookiecutter.github_user}}/'
         f'{{cookiecutter.package_name}}/archive/{version}.tar.gz'
@@ -83,7 +81,10 @@ setup(
       'Topic :: Software Development :: Libraries',
 
       # Pick your license.  (It should match "license" above.)
-      {% if cookiecutter.license != 'None' %}'License :: OSI Approved :: {{cookiecutter.license}} License',{% else %}# 'License :: OSI Approved :: <Your Preferred License>',{%endif%}
+      {% if cookiecutter.license != 'None' %}
+        '''License :: OSI Approved :: {{cookiecutter.license}} License''',
+      {% else %}'''License :: OSI Approved :: <Your Preferred License>''',
+      {%endif%}
 
       # Specify the Python versions you support here. In particular, ensure
       # that you indicate whether you support Python 2, Python 3 or both.
