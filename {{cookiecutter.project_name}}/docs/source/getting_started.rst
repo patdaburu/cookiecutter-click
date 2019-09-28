@@ -1,9 +1,4 @@
-.. _getting-started:
-
-.. image:: _static/images/logo.svg
-   :width: 100px
-   :alt: {{cookiecutter.package_name}}
-   :align: right
+.. _getting_started:
 
 .. toctree::
     :glob:
