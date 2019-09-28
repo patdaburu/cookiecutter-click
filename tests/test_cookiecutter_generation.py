@@ -17,7 +17,7 @@ def context():
         "cli_name": "click_project",
         "project_version": "0.0.1",
         "project_description": "A click command-line app.",
-        "python_version": "3.7",
+        "python_version": "3.6",
         "sphinx_theme": "alabaster",
         "author_name": "my_name",
         "author_email": "my_email@gmail.com",
