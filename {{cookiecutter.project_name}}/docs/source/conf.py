@@ -11,7 +11,6 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 import os
 import sys
-from datetime import datetime
 from unittest.mock import MagicMock
 
 # Determine the absolute path to the directory containing the python modules.
@@ -21,7 +20,7 @@ _pysrc = os.path.abspath(os.path.join(os.path.abspath(__file__), "..", "..", "..
 sys.path.insert(0, _pysrc)
 
 # Now we can import local modules.
-import {{cookiecutter.package_name}} # noqa
+import {{cookiecutter.package_name}}  # noqa
 
 # -- Document __init__ methods by default. --------------------------------
 # This section was added to allow __init__() to be documented automatically.
@@ -83,7 +82,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "{{cookiecutter.package_name}}"
-copyright = "2019, {{cookiecutter.github_user}}" #TODO: make automatic year datetime.now().strfttime(%Y)
+copyright = "2019, {{cookiecutter.github_user}}"
 author = "{{cookiecutter.author_name}}"
 
 # The version info for the project you're documenting, acts as replacement for
