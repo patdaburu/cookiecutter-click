@@ -1,6 +1,6 @@
-# cookiecutter-cli
+# Cookiecutter Click
 
-This is a [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) template designed to help you get started with your [command-line interface (CLI)](http://click.pocoo.org/5/) project.
+Powered by [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/), Cookiecutter Click is a framework for jumpstarting production-ready [command-line interface (CLI)](http://click.pocoo.org/5/) projects quickly.
 
 ## Project Features
 
