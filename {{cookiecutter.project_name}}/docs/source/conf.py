@@ -83,7 +83,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "{{cookiecutter.package_name}}"
-copyright = "{}, {{cookiecutter.github_user}}".format(datetime.now().strftime("%Y"))
+copyright = "{{datetime.now().strftime('%Y)}}, {{cookiecutter.github_user}}"
 author = "{{cookiecutter.author_name}}"
 
 # The version info for the project you're documenting, acts as replacement for
