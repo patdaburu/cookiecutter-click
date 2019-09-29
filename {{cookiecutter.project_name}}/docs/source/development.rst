@@ -1,10 +1,5 @@
 .. _development:
 
-.. image:: _static/images/logo.svg
-   :width: 100px
-   :alt: {{cookiecutter.package_name}}
-   :align: right
-
 Development
 ===========
 
@@ -15,6 +10,7 @@ Development
    development/getting_started
    development/make
    development/publishing
+   development/docs
 
 
 Indices and tables

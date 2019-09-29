@@ -1,10 +1,5 @@
 .. _getting_started_dev:
 
-.. image:: ../_static/images/logo.svg
-   :width: 100px
-   :alt: {{cookiecutter.package_name}}
-   :align: right
-
 .. toctree::
     :glob:
 
@@ -19,12 +14,13 @@ steps from top to bottom you should be ready to roll by the end.
 Get the Source
 ==============
 
-The source code for the `{{cookiecutter.package_name}}` project lives at
-`github <https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.package_name}}>`_.  You can use `git clone` to get it.
+The source code for the `{{cookiecutter.project_name}}` project lives at
+`github <https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}>`_.  
+You can use `git clone` to get it.
 
 .. code-block:: bash
 
-   git clone https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.package_name}}
+   git clone https://github.com/patdaburu/bnrml
 
 Create the Virtual Environment
 ==============================
@@ -52,8 +48,8 @@ If the tests run and pass, you're ready to roll.
 Getting Answers
 ===============
 
-Once the environment is set up, you can perform a quick build of this project documentation using
-the `make answers` target.
+Once the environment is set up, you can perform a quick build of this project
+documentation using the `make answers` target.
 
 .. code-block:: bash
 

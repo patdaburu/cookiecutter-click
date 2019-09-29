@@ -56,7 +56,7 @@ setup(
     {{cookiecutter.cli_name}}={{cookiecutter.package_name}}.cli:cli
     """,
     python_requires=">={{cookiecutter.project_version}}",
-    license={% if cookiecutter.license != "Geo-Comm" %}'{{cookiecutter.license}}'{% else %}None{% endif %},
+    license={% if cookiecutter.license != "None" %}'{{cookiecutter.license}}'{% else %}None{% endif %},  # noqa
     author='{{cookiecutter.author_name}}',
     author_email='{{cookiecutter.author_email}}',
     # Use the URL to the github repo.
@@ -81,10 +81,10 @@ setup(
       'Topic :: Software Development :: Libraries',
 
       # Pick your license.  (It should match "license" above.)
-      {% if cookiecutter.license != 'None' %}
+      {% if cookiecutter.license != 'None' %}  # noqa
         '''License :: OSI Approved :: {{cookiecutter.license}} License''',
-      {% else %}'''License :: OSI Approved :: <Your Preferred License>''',
-      {%endif%}
+      {% else %}'''License :: OSI Approved :: <Your Preferred License>''',  # noqa
+      {%endif%}  # noqa
 
       # Specify the Python versions you support here. In particular, ensure
       # that you indicate whether you support Python 2, Python 3 or both.
