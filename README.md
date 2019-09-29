@@ -2,11 +2,11 @@
 
 This is a [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) template designed to help you get started with your [command-line interface (CLI)](http://click.pocoo.org/5/) project.
 
-## Project Features
+## Features
 
 The project you create from this template has a few features to be aware of including:
 
-* A [click](http://click.pocoo.org/5/) application to get you going
+* A [Click](http://click.pocoo.org/5/) application to get you going
 * [Pytest](https://docs.pytest.org/en/latest/) unit tests
 * A documentation project based on [Sphinx](http://www.sphinx-doc.org/en/master/usage/quickstart.html).
 
@@ -115,6 +115,8 @@ Would you like to learn more?  Check out the links below!
 ## Authors
 
 * **Pat Daburu** - *Initial work* - [github](https://github.com/patdaburu)
+* **Vlad Doster** - *Contributor* - [github](https://github.com/vladdoster)
+
 
 See also the list of [contributors](https://github.com/patdaburu/cookiecutter-click/graphs/contributors) who participated in this project.
 
