@@ -7,3 +7,5 @@
 
 {{cookiecutter.project_description}}
 """
+
+from .version import __version__, __release__
