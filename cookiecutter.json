@@ -1,5 +1,5 @@
 {
-  "project_name": "Click CLI",
+  "project_name": "Click-CLI",
   "package_name": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') }}",
   "cli_name": "{{ cookiecutter.package_name }}",
   "project_version": "0.0.1",

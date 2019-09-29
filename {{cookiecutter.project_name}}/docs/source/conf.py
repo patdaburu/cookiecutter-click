@@ -11,20 +11,17 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 import os
 import sys
+from datetime import datetime
 from unittest.mock import MagicMock
 
 # Determine the absolute path to the directory containing the python modules.
-_pysrc = os.path.abspath(
-    os.path.join(os.path.abspath(__file__), "..", "..", ".."))
+_pysrc = os.path.abspath(os.path.join(os.path.abspath(__file__), "..", "..", ".."))
 
 # Insert it into the path.
 sys.path.insert(0, _pysrc)
 
-
 # Now we can import local modules.
-# fmt: off
-# import {{cookiecutter.package_name}}
-# fmt: on
+import {{cookiecutter.package_name}} # noqa
 
 # -- Document __init__ methods by default. --------------------------------
 # This section was added to allow __init__() to be documented automatically.
@@ -48,8 +45,6 @@ class Mock(MagicMock):
         return MagicMock()
 
 
-# The full version, incl{{cookiecutter.package_name}}uding alpha/beta/rc tags
-
 MOCK_MODULES = [
     "numpy",
     "scipy",
@@ -72,8 +67,7 @@ sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ["sphinx.ext.autodoc", "sphinx.ext.viewcode",
-              "sphinx.ext.githubpages"]
+extensions = ["sphinx.ext.autodoc", "sphinx.ext.viewcode", "sphinx.ext.githubpages"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -89,7 +83,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "{{cookiecutter.package_name}}"
-copyright = "2019, {{cookiecutter.github_user}}"
+copyright = "{}, {{cookiecutter.github_user}}".format(datetime.now().strftime("%Y"))
 author = "{{cookiecutter.author_name}}"
 
 # The version info for the project you're documenting, acts as replacement for
@@ -129,23 +123,25 @@ todo_include_todos = False
 # a list of builtin themes.
 #
 html_theme = "sphinx_rtd_theme"
-
-{ % if cookiecutter.sphinx_theme == 'alabaster' %}  # noqa
-html_theme = 'alabaster'
+# fmt: off
+{% if cookiecutter.sphinx_theme == 'alabaster'%}  # noqa
+# fmt: on
+html_theme = "alabaster"
 
 html_theme_options = {
-    'logo': 'logo.png',
-    'github_user': '{{cookiecutter.github_user}}',
-    'github_repo': '{{cookiecutter.project_name}}',
+    "logo": "logo.png",
+    "github_user": "{{cookiecutter.github_user}}",
+    "github_repo": "{{cookiecutter.project_name}}",
 }
-{ % endif %}  # noqa
-{ % if cookiecutter.sphinx_theme == 'readthedocs' %}  # noqa
-
-html_theme = 'sphinx_rtd_theme'
-html_theme_options = {
-
-}
-{ % endif %}  # noqa
+# fmt: off
+{% endif %}  # noqa
+{% if cookiecutter.sphinx_theme == 'readthedocs' %}  # noqa
+# fmt: on
+html_theme = "sphinx_rtd_theme"
+html_theme_options = {}
+# fmt: off
+{% endif %}  # noqa
+# fmt: on
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
