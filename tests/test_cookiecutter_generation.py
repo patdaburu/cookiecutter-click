@@ -86,7 +86,7 @@ def test_black_passes(cookies):
 
     try:
         sh.black("--verbose", "--check", "--diff",
-                 "--exclude", 'venv|docs/source/conf.py|setup.py',
+                 "--exclude", "venv|docs/source/conf.py|setup.py",
                  str(result.project))
     except sh.ErrorReturnCode as e:
         pytest.fail(e)
