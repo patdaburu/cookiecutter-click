@@ -84,19 +84,6 @@ def test_black_passes(cookies):
         pytest.fail(e)
 
 
-@pytest.mark.coverage
-def test_coverage_passes(cookies, context):
-    """
-    Generated project should pass coverage.
-    """
-    result = cookies.bake()
-
-    try:
-        sh.Command("py.test", "--cov-report term --cov=. tests/ && coveralls")
-    except sh.ErrorReturnCode as e:
-        pytest.fail(e)
-
-
 @pytest.mark.flake8
 def test_flake8_passes(cookies, context):
     """
