@@ -26,33 +26,30 @@ LOGGING_LEVELS = {
     1: logging.ERROR,
     2: logging.WARN,
     3: logging.INFO,
-    4: logging.DEBUG
+    4: logging.DEBUG,
 }  #: a mapping of `verbose` option counts to logging levels
 
 
 class Info(object):
     """
-    This is an information object that can be used to pass data between CLI functions.
+    An information object to pass data between CLI functions.
     """
-    def __init__(self):  # Note that this object must have an empty constructor.
+
+    def __init__(self):  # Note: This object must have an empty constructor.
         self.verbose: int = 0
 
 
 # pass_info is a decorator for functions that pass 'Info' objects.
 #: pylint: disable=invalid-name
-pass_info = click.make_pass_decorator(
-    Info,
-    ensure=True
-)
+pass_info = click.make_pass_decorator(Info, ensure=True)
 
 
 # Change the options to below to suit the actual options for your task (or
 # tasks).
 @click.group()
-@click.option('--verbose', '-v', count=True, help="Enable verbose output.")
+@click.option("--verbose", "-v", count=True, help="Enable verbose output.")
 @pass_info
-def cli(info: Info,
-        verbose: int):
+def cli(info: Info, verbose: int):
     """
     Run {{cookiecutter.cli_name}}.
     """
@@ -65,12 +62,13 @@ def cli(info: Info,
         )
         click.echo(
             click.style(
-                f'Verbose logging is enabled. '
-                f'(LEVEL={logging.getLogger().getEffectiveLevel()})',
-                fg='yellow'
+                f"Verbose logging is enabled. "
+                f"(LEVEL={logging.getLogger().getEffectiveLevel()})",
+                fg="yellow",
             )
         )
     info.verbose = verbose
+
 
 @cli.command()
 @pass_info
@@ -86,4 +84,4 @@ def version():
     """
     Get the library version.
     """
-    click.echo(click.style(f'{__version__}', bold=True))
+    click.echo(click.style(f"{__version__}", bold=True))

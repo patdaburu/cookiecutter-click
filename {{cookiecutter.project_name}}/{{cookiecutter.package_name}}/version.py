@@ -8,5 +8,5 @@
 This module contains project version information.
 """
 
-__version__ = '0.0.1'  #: the working version
-__release__ = '0.0.1'  #: the release version
+__version__ = "{{cookiecutter.project_version}}"  #: the working version
+__release__ = "{{cookiecutter.project_version}}"  #: the release version

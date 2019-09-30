@@ -8,13 +8,16 @@
 This is the test module for the project's command-line interface (CLI)
 module.
 """
-import logging
-from click.testing import CliRunner, Result
+# fmt: off
 import {{cookiecutter.package_name}}.cli as cli
 from {{cookiecutter.package_name}} import __version__
+# fmt: on
+from click.testing import CliRunner, Result
+
 
 # To learn more about testing Click applications, visit the link below.
 # http://click.pocoo.org/5/testing/
+
 
 def test_version_displays_library_version():
     """
@@ -22,9 +25,10 @@ def test_version_displays_library_version():
     Assert: The output matches the library version.
     """
     runner: CliRunner = CliRunner()
-    result: Result = runner.invoke(cli.cli, ['version'])
-    assert __version__ in result.output.strip(), \
-        'Version number should match library version.'
+    result: Result = runner.invoke(cli.cli, ["version"])
+    assert (
+        __version__ in result.output.strip()
+    ), "Version number should match library version."
 
 
 def test_verbose_output():
@@ -33,9 +37,10 @@ def test_verbose_output():
     Assert: The output indicates verbose logging is enabled.
     """
     runner: CliRunner = CliRunner()
-    result: Result = runner.invoke(cli.cli, ['-v', 'version'])
-    assert 'Verbose' in result.output.strip(), \
-        'Verbose logging should be indicated in output.'
+    result: Result = runner.invoke(cli.cli, ["-v", "version"])
+    assert (
+        "Verbose" in result.output.strip()
+    ), "Verbose logging should be indicated in output."
 
 
 def test_hello_displays_expected_message():
@@ -44,6 +49,8 @@ def test_hello_displays_expected_message():
     Assert:  The output matches the library version.
     """
     runner: CliRunner = CliRunner()
-    result: Result = runner.invoke(cli.cli, ['hello'])
+    result: Result = runner.invoke(cli.cli, ["hello"])
+    # fmt: off
     assert '{{cookiecutter.cli_name}}' in result.output.strip(), \
         "'Hello' messages should contain the CLI name."
+    # fmt: on
