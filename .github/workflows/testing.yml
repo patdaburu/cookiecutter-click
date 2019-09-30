@@ -20,9 +20,12 @@ jobs:
       - name: Test py36
         run: |
           tox -e py36
-      - name: Flake8
-        run: |
-          tox -e flake8
       - name: Black
         run: |
           tox -e black
+      - name: Coverage
+        run: |
+          tox -e coverage
+      - name: Flake8
+        run: |
+          tox -e flake8

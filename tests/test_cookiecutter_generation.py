@@ -64,6 +64,40 @@ def test_project_generation(cookies, context):
     check_paths(paths)
 
 
+@pytest.mark.black
+def test_black_passes(cookies):
+    """
+    Generated project should pass black.
+    """
+    result = cookies.bake()
+
+    try:
+        sh.black(
+            "--verbose",
+            "--check",
+            "--diff",
+            "--exclude",
+            "venv|docs/source/conf.py|setup.py",
+            str(result.project),
+        )
+    except sh.ErrorReturnCode as e:
+        pytest.fail(e)
+
+
+@pytest.mark.coverage
+def test_coverage_passes(cookies, context):
+    """
+    Generated project should pass coverage.
+    """
+    result = cookies.bake()
+
+    try:
+        sh.Command("py.test", "--cov-report term --cov=. tests/")
+        sh.Command("coveralls")
+    except sh.ErrorReturnCode as e:
+        pytest.fail(e)
+
+
 @pytest.mark.flake8
 def test_flake8_passes(cookies, context):
     """
@@ -73,20 +107,5 @@ def test_flake8_passes(cookies, context):
 
     try:
         sh.flake8("--config=.flake8", str(result.project))
-    except sh.ErrorReturnCode as e:
-        pytest.fail(e)
-
-
-@pytest.mark.black
-def test_black_passes(cookies):
-    """
-    Generated project should pass black.
-    """
-    result = cookies.bake()
-
-    try:
-        sh.black("--verbose", "--check", "--diff",
-                 "--exclude", "venv|docs/source/conf.py|setup.py",
-                 str(result.project))
     except sh.ErrorReturnCode as e:
         pytest.fail(e)
