@@ -92,8 +92,7 @@ def test_coverage_passes(cookies, context):
     result = cookies.bake()
 
     try:
-        sh.Command("py.test", "--cov-report term --cov=. tests/")
-        sh.Command("coveralls")
+        sh.Command("py.test", "--cov-report term --cov=. tests/ && coveralls")
     except sh.ErrorReturnCode as e:
         pytest.fail(e)
 
