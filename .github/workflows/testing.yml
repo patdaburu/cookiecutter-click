@@ -23,9 +23,6 @@ jobs:
       - name: Black
         run: |
           tox -e black
-      - name: Coverage
-        run: |
-          tox -e coverage
       - name: Flake8
         run: |
           tox -e flake8
