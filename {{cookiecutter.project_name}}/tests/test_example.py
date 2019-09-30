@@ -8,10 +8,6 @@
 This is a sample test module.
 """
 
-# fmt: off
-# import {{cookiecutter.package_name}}
-# fmt: on
-
 import pytest
 
 """
@@ -42,19 +38,20 @@ def test_import_getVersions_originalVersions():
     third parameter.
     """
 
-    @pytest.mark.parametrize("a,b,c", [(1, 2, 5), (3, 4, 25)])
-    def test_ab_addSquares_equalsC(a, b, c):
-        """
-        Arrange: Acquire the first two parameters (a and b).
-        Act: Add the squares of the first two parameters (a and b).
-        Assert: The sum of the squares equals the third parameter (c).
 
-        :param a: the first parameter
-        :param b: the second parameter
-        :param c: the result of adding the squares of a and b
-        """
-        assert (
-            a * a + b * b == c,
-            "'c' should be the sum of the squares of 'a' and 'b'. "
-            "This is an example test and can be removed.",
-        )
+@pytest.mark.parametrize("a,b,c", [(1, 2, 5), (3, 4, 25)])
+def test_ab_addSquares_equalsC(a, b, c):
+    """
+    Arrange: Acquire the first two parameters (a and b).
+    Act: Add the squares of the first two parameters (a and b).
+    Assert: The sum of the squares equals the third parameter (c).
+
+    :param a: the first parameter
+    :param b: the second parameter
+    :param c: the result of adding the squares of a and b
+    """
+    assert (
+        a * a + b * b == c,
+        "'c' should be the sum of the squares of 'a' and 'b'. "
+        "This is an example test and can be removed.",
+    )
