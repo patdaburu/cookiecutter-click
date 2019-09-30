@@ -1,6 +1,6 @@
 # cookiecutter-cli
 
-[![Coverage Status](https://coveralls.io/repos/github/vladdoster/cookiecutter-click/badge.svg?branch=master)](https://coveralls.io/github/vladdoster/cookiecutter-click?branch=master) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+![](https://github.com/vladdoster/cookiecutter-click/workflows/Build/badge.svg)  [![Coverage Status](https://coveralls.io/repos/github/vladdoster/cookiecutter-click/badge.svg?branch=master)](https://coveralls.io/github/vladdoster/cookiecutter-click?branch=master) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 This is a [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) template designed to help you get started with your [command-line interface (CLI)](http://click.pocoo.org/5/) project.
 
