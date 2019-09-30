@@ -1,6 +1,6 @@
 # cookiecutter-cli
 
-![](https://github.com/vladdoster/cookiecutter-click/workflows/Build/badge.svg) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+![](https://pyup.io/repos/github/patdaburu/cookiecutter-click/shield.svg) ![](https://github.com/vladdoster/cookiecutter-click/workflows/Build/badge.svg) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black) ![](https://pyup.io/repos/github/patdaburu/cookiecutter-click/python-3-shield.svg)
 
 This is a [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) template designed to help you get started with your [command-line interface (CLI)](http://click.pocoo.org/5/) project.
 
