@@ -1,5 +1,5 @@
 {
-  "project_name": "my-click-project",
+  "project_name": "ClickCLI",
   "package_name": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') }}",
   "cli_name": "{{ cookiecutter.package_name }}",
   "project_version": "0.0.1",
@@ -14,7 +14,7 @@
     "readthedocs"
   ],
   "author_name": "my_name",
-  "author_email": "my_email",
+  "author_email": "my_email@gmail.com",
   "license": [
     "MIT",
     "BSD",
@@ -22,5 +22,5 @@
     "Apache Software License 2.0",
     "None"
   ],
-  "github_user": "my_github_user"
+  "github_user": "my_github_username"
 }

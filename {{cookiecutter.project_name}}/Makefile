@@ -4,15 +4,6 @@ PROJ_SLUG = {{cookiecutter.package_name}}
 CLI_NAME = {{cookiecutter.cli_name}}
 PY_VERSION = {{cookiecutter.python_version}}
 
-GREEN = 2
-RED = 1
-
-define colorecho
-        @tput bold
-        @tput setaf $1
-        @echo $2
-        @tput sgr0
-endef
 
 build:
 	pip install --editable .
@@ -62,14 +53,6 @@ clean :
 
 venv :
 	virtualenv --python python$(PY_VERSION) venv
-	@echo
-	@echo To activate the environment, use the following command:
-	@echo
-	$(call colorecho, $(GREEN), "source venv/bin/activate")
-	@echo
-	@echo Once activated, you can use the 'install' target to install dependencies:
-	@echo
-	$(call colorecho, $(GREEN), "source venv/bin/activate")
 
 install:
 	pip install -r requirements.txt

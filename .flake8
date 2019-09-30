@@ -1,0 +1,8 @@
+[flake8]
+ignore =
+    E402, # Ignore import not being at top of test
+    F631, # Assertion is always true in test_example.py
+max-line-length = 160
+exclude =
+    venv,
+    setup.py

@@ -1,5 +1,7 @@
 # Cookiecutter Click
 
+![](https://github.com/patdaburu/cookiecutter-click/workflows/Build/badge.svg) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+
 Powered by [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/), Cookiecutter Click is a framework for jumpstarting production-ready [command-line interface (CLI)](http://click.pocoo.org/5/) projects quickly.
 
 ## Project Features
