@@ -47,7 +47,8 @@ project_description [This is my click command-line app]: Browse Reddit from a cl
 Select python_version:
 1 - 3.6
 2 - 3.7
-Choose from 1, 2 [1]: 1
+3 - 3.8
+Choose from 1, 2, 3 [1]: 1
 author_name [my_name]: Vlad Doster
 author_email [my_email]: mvdoster@gmail.com
 Select license:
