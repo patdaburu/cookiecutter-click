@@ -110,7 +110,7 @@ Would you like to learn more?  Check out the links below!
 * [Cookiecutter Project Documentation](https://cookiecutter.readthedocs.io/en/latest/)
 * [Cookiecutter: Project Templates Made Easy](https://www.pydanny.com/cookie-project-templates-made-easy.html)
 * [Click](http://click.pocoo.org/5/)
-* [pytest](https://docs.pytest.org/en/latest/)
+* [Pytest](https://docs.pytest.org/en/latest/)
 * [Sphinx](http://www.sphinx-doc.org/en/master/usage/quickstart.html)
 
 
