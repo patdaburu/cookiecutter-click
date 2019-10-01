@@ -1,14 +1,14 @@
-# cookiecutter-cli
+# Cookiecutter Click
 
 ![](https://pyup.io/repos/github/patdaburu/cookiecutter-click/shield.svg) ![](https://github.com/vladdoster/cookiecutter-click/workflows/Build/badge.svg) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black) ![](https://pyup.io/repos/github/patdaburu/cookiecutter-click/python-3-shield.svg)
 
-This is a [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) template designed to help you get started with your [command-line interface (CLI)](http://click.pocoo.org/5/) project.
+Powered by [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/), Cookiecutter Click is a framework for jumpstarting production-ready [command-line interface (CLI)](http://click.pocoo.org/5/) projects quickly.
 
-## Project Features
+## Features
 
 The project you create from this template has a few features to be aware of including:
 
-* A [click](http://click.pocoo.org/5/) application to get you going
+* A [Click](http://click.pocoo.org/5/) application to get you going
 * [Pytest](https://docs.pytest.org/en/latest/) unit tests
 * A documentation project based on [Sphinx](http://www.sphinx-doc.org/en/master/usage/quickstart.html).
 
@@ -47,7 +47,8 @@ project_description [This is my click command-line app]: Browse Reddit from a cl
 Select python_version:
 1 - 3.6
 2 - 3.7
-Choose from 1, 2 [1]: 1
+3 - 3.8
+Choose from 1, 2, 3 [1]: 1
 author_name [my_name]: Vlad Doster
 author_email [my_email]: mvdoster@gmail.com
 Select license:
@@ -110,13 +111,15 @@ Would you like to learn more?  Check out the links below!
 * [Cookiecutter Project Documentation](https://cookiecutter.readthedocs.io/en/latest/)
 * [Cookiecutter: Project Templates Made Easy](https://www.pydanny.com/cookie-project-templates-made-easy.html)
 * [Click](http://click.pocoo.org/5/)
-* [pytest](https://docs.pytest.org/en/latest/)
+* [Pytest](https://docs.pytest.org/en/latest/)
 * [Sphinx](http://www.sphinx-doc.org/en/master/usage/quickstart.html)
 
 
 ## Authors
 
 * **Pat Daburu** - *Initial work* - [github](https://github.com/patdaburu)
+* **Vlad Doster** - *Contributor* - [github](https://github.com/vladdoster)
+
 
 See also the list of [contributors](https://github.com/patdaburu/cookiecutter-click/graphs/contributors) who participated in this project.
 
