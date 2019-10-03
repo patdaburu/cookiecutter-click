@@ -49,10 +49,6 @@ Select python_version:
 2 - 3.7
 3 - 3.8
 Choose from 1, 2, 3 [1]: 1
-Select virtualenv:
-1 - virtualenv
-2 - python3
-Choose from 1, 2 (1, 2) [1]: 1
 author_name [my_name]: Vlad Doster
 author_email [my_email]: mvdoster@gmail.com
 Select license:
