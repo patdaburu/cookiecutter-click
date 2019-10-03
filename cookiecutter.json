@@ -9,6 +9,10 @@
     "3.7",
     "3.8"
   ],
+  "virtualenv": [
+    "virtualenv",
+    "python3"
+  ],
   "sphinx_theme": [
     "alabaster",
     "readthedocs"
