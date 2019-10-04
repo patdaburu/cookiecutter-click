@@ -66,5 +66,5 @@ SOFTWARE.
 {%- else -%}
 Copyright (c) {{cookiecutter.author_name}}
 
-All righs reserved.
+All rights reserved.
 {%- endif -%}
