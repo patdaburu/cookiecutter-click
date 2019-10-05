@@ -48,10 +48,14 @@ Select python_version:
 1 - 3.6
 2 - 3.7
 3 - 3.8
-Choose from 1, 2, 3 [1]: 1
+Choose from 1, 2, 3 (1, 2, 3) [1]: 1
 Select virtualenv:
 1 - virtualenv
 2 - python3
+Choose from 1, 2 (1, 2) [1]: 1
+Select sphinx_theme:
+1 - alabaster
+2 - readthedocs
 Choose from 1, 2 (1, 2) [1]: 1
 author_name [my_name]: Vlad Doster
 author_email [my_email]: mvdoster@gmail.com
@@ -60,8 +64,8 @@ Select license:
 2 - BSD
 3 - GPLv3
 4 - Apache Software License 2.0
-5 - Not open source
-Choose from 1,2 (1, 2, 3, 4, 5) [1]: 1
+5 - None
+Choose from 1, 2, 3, 4, 5 (1, 2, 3, 4, 5) [1]: 1
 github_user [my_github_user]: vladdoster
 ```
 
