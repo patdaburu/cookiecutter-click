@@ -19,9 +19,7 @@ The project you create from this template has a few features to be aware of incl
 * [Pytest](https://docs.pytest.org/en/latest/) unit tests
 * A documentation project based on [Sphinx](http://www.sphinx-doc.org/en/master/usage/quickstart.html).
 
-## Getting Started
-
-### Usage
+## Usage
 
 Let's pretend you want to create a CLI tool called "redditcli". Rather than using standard lib argparse and then editing mundane details to include your basic cli tool configuration that always get forgotten until the worst possible moment, get cookiecutter to do all the work.
 
