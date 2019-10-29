@@ -4,8 +4,8 @@ binaryornot==0.4.4
 
 # Code quality
 # ------------------------------------------------------------------------------
-black==19.3b0
-flake8==3.7.8
+black==19.10b0
+flake8==3.7.9
 coverage==4.5.4
 python-coveralls==2.9.3
 # Testing
