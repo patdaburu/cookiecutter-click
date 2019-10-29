@@ -41,7 +41,7 @@ if os.getenv('buildnum') is not None:
     )
 
 setup(
-    name='{{cookiecutter.package_name}}',
+    name='{{cookiecutter.project_name}}',
     description="{{cookiecutter.project_description}}",
     long_description=long_description,
     packages=find_packages(
