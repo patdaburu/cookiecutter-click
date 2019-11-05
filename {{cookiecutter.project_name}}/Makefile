@@ -3,6 +3,7 @@
 PROJ_SLUG = {{cookiecutter.package_name}}
 CLI_NAME = {{cookiecutter.cli_name}}
 PY_VERSION = {{cookiecutter.python_version}}
+LINTER = {{cookiecutter.linter}}
 {% if cookiecutter.virtualenv == 'python3' %}
 SHELL = bash
 {% endif %}
@@ -21,7 +22,7 @@ freeze:
 	pip freeze > requirements.txt
 
 lint:
-	pylint $(PROJ_SLUG)
+	$(LINTER) $(PROJ_SLUG)
 
 test: lint
 	py.test --cov-report term --cov=$(PROJ_SLUG) tests/

@@ -13,6 +13,10 @@
     "virtualenv",
     "python3"
   ],
+  "linter": [
+    "flake8",
+    "pylint"
+  ],
   "sphinx_theme": [
     "alabaster",
     "readthedocs"

@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 
 """
+This file is used to create the package we'll publish to PyPI.
+
 .. currentmodule:: setup.py
 .. moduleauthor:: {{cookiecutter.author_name}} <{{cookiecutter.author_email}}>
-
-This file is used to create the package we'll publish to PyPI.
 """
 
 import importlib.util
@@ -82,10 +82,10 @@ setup(
 
       # Pick your license.  (It should match "license" above.)
       {% if cookiecutter.license != 'None' %}  # noqa
-        '''License :: OSI Approved :: {{cookiecutter.license}} License''',
-      {% else %}'''License :: OSI Approved :: <Your Preferred License>''',  # noqa
+      '''License :: OSI Approved :: {{cookiecutter.license}} License''',
+      {% else %}
+      '''License :: OSI Approved :: <Your Preferred License>''',  # noqa
       {%endif%}  # noqa
-
       # Specify the Python versions you support here. In particular, ensure
       # that you indicate whether you support Python 2, Python 3 or both.
       'Programming Language :: Python :: {{cookiecutter.python_version}}',
