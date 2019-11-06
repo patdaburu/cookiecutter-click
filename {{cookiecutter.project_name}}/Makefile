@@ -37,7 +37,9 @@ docs: coverage
 	mkdir -p docs/source/_static
 	mkdir -p docs/source/_templates
 	cd docs && $(MAKE) html
-	pandoc --from=markdown --to=rst --output=README.rst README.md
+	# Uncomment the line below if you want to use pandoc to
+	# generate your README.rst from README.md.
+	#pandoc --from=markdown --to=rst --output=README.rst README.md
 
 answers:
 	cd docs && $(MAKE) html

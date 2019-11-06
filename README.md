@@ -2,9 +2,9 @@
 
 # Cookiecutter Click
 
-![](https://github.com/patdaburu/cookiecutter-click/workflows/Build/badge.svg) 
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black) 
-![](https://pyup.io/repos/github/patdaburu/cookiecutter-click/shield.svg) 
+![](https://github.com/patdaburu/cookiecutter-click/workflows/Build/badge.svg)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+![](https://pyup.io/repos/github/patdaburu/cookiecutter-click/shield.svg)
 ![](https://pyup.io/repos/github/patdaburu/cookiecutter-click/python-3-shield.svg)
 
 ### Powered by [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/), Cookiecutter Click is a framework for jumpstarting production-ready [command-line interface (CLI)](http://click.pocoo.org/5/) projects quickly.
@@ -58,6 +58,10 @@ Select virtualenv:
 1 - virtualenv
 2 - python3
 Choose from 1, 2 (1, 2) [1]: 1
+Select linter:
+1 - flake8
+2 - pylint
+Choose from 1, 2 (1, 2) [1]:
 Select sphinx_theme:
 1 - alabaster
 2 - readthedocs
@@ -90,7 +94,7 @@ $ git add .
 $ git commit -m "first awesome commit"
 $ git remote add origin git@github.com:vladdoster/reddit_cli.git
 $ git push -u origin master
-```  
+```
 
 #### Run the `make` Targets
 
