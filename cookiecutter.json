@@ -21,6 +21,10 @@
     "alabaster",
     "readthedocs"
   ],
+  "auto_readme": [
+    "None",
+    "pandoc"
+  ],
   "author_name": "my_name",
   "author_email": "my_email@gmail.com",
   "license": [

@@ -37,9 +37,7 @@ docs: coverage
 	mkdir -p docs/source/_static
 	mkdir -p docs/source/_templates
 	cd docs && $(MAKE) html
-	# Uncomment the line below if you want to use pandoc to
-	# generate your README.rst from README.md.
-	#pandoc --from=markdown --to=rst --output=README.rst README.md
+	{% if cookiecutter.auto_readme == 'pandoc' %}pandoc --from=markdown --to=rst --output=README.rst README.md{% endif %}
 
 answers:
 	cd docs && $(MAKE) html

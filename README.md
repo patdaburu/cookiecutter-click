@@ -66,6 +66,10 @@ Select sphinx_theme:
 1 - alabaster
 2 - readthedocs
 Choose from 1, 2 (1, 2) [1]: 1
+Select auto_readme:
+1 - None
+2 - pandoc
+Choose from 1, 2 (1, 2) [1]: 1
 author_name [my_name]: Vlad Doster
 author_email [my_email]: mvdoster@gmail.com
 Select license:
