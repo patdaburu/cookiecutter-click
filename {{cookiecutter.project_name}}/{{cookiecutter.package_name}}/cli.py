@@ -2,11 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-.. currentmodule:: {{cookiecutter.package_name}}.cli
-.. moduleauthor:: {{cookiecutter.author_name}} <{{cookiecutter.author_email}}>
+This is the entry point for the command-line interface (CLI) application.
 
-This is the entry point for the command-line interface (CLI) application.  It
-can be used as a handy facility for running the task from a command line.
+Itcan be used as a handy facility for running the task from a command line.
 
 .. note::
 
@@ -16,6 +14,9 @@ can be used as a handy facility for running the task from a command line.
 
     To learn more about running Luigi, visit the Luigi project's
     `Read-The-Docs <http://luigi.readthedocs.io/en/stable/>`_ page.
+
+.. currentmodule:: {{cookiecutter.package_name}}.cli
+.. moduleauthor:: {{cookiecutter.author_name}} <{{cookiecutter.author_email}}>
 """
 import logging
 import click
@@ -31,11 +32,10 @@ LOGGING_LEVELS = {
 
 
 class Info(object):
-    """
-    An information object to pass data between CLI functions.
-    """
+    """An information object to pass data between CLI functions."""
 
     def __init__(self):  # Note: This object must have an empty constructor.
+        """Create a new instance."""
         self.verbose: int = 0
 
 
@@ -50,9 +50,7 @@ pass_info = click.make_pass_decorator(Info, ensure=True)
 @click.option("--verbose", "-v", count=True, help="Enable verbose output.")
 @pass_info
 def cli(info: Info, verbose: int):
-    """
-    Run {{cookiecutter.cli_name}}.
-    """
+    """Run {{cookiecutter.cli_name}}."""
     # Use the verbosity count to determine the logging level...
     if verbose > 0:
         logging.basicConfig(
@@ -73,15 +71,11 @@ def cli(info: Info, verbose: int):
 @cli.command()
 @pass_info
 def hello(_: Info):
-    """
-    Say 'hello' to the nice people.
-    """
+    """Say 'hello' to the nice people."""
     click.echo(f"{{cookiecutter.cli_name}} says 'hello'")
 
 
 @cli.command()
 def version():
-    """
-    Get the library version.
-    """
+    """Get the library version."""
     click.echo(click.style(f"{__version__}", bold=True))
