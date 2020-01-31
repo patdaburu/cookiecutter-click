@@ -1,4 +1,4 @@
-cookiecutter==1.6.0
+cookiecutter==1.7.0
 sh==1.12.14
 binaryornot==0.4.4
 
@@ -6,15 +6,15 @@ binaryornot==0.4.4
 # ------------------------------------------------------------------------------
 black==19.10b0
 flake8==3.7.9
-coverage==4.5.4
+coverage==5.0.3
 python-coveralls==2.9.3
 # Testing
 # ------------------------------------------------------------------------------
-tox==3.14.0
-pytest==5.2.2
+tox==3.14.3
+pytest==5.3.5
 pytest-cov==2.8.1
 pytest_cases==1.11.4
 pytest-cookies==0.4.0
-pytest-xdist==1.30.0
-pyyaml==5.1.2
-virtualenv==16.7.7
+pytest-xdist==1.31.0
+pyyaml==5.3
+virtualenv==16.7.9
