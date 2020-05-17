@@ -72,7 +72,7 @@ def cli(info: Info, verbose: int):
 @pass_info
 def hello(_: Info):
     """Say 'hello' to the nice people."""
-    click.echo(f"{{cookiecutter.cli_name}} says 'hello'")
+    click.echo("{{cookiecutter.cli_name}} says 'hello'")
 
 
 @cli.command()
