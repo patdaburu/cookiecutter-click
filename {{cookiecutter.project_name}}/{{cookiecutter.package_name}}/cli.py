@@ -4,7 +4,7 @@
 """
 This is the entry point for the command-line interface (CLI) application.
 
-Itcan be used as a handy facility for running the task from a command line.
+It can be used as a handy facility for running the task from a command line.
 
 .. note::
 
