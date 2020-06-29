@@ -11,4 +11,4 @@ setuptools>=38.4.0
 Sphinx>=2.2.0{% if cookiecutter.sphinx_theme == "readthedocs" %}
 sphinx-rtd-theme>=0.4.3,<1{% endif %}
 tox>=3.0.0,<4
-twine==3.1.1
+twine==3.2.0
