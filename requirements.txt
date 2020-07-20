@@ -17,4 +17,4 @@ pytest_cases==2.0.4
 pytest-cookies==0.5.1
 pytest-xdist==1.33.0
 pyyaml==5.3.1
-virtualenv==20.0.26
+virtualenv==20.0.27
