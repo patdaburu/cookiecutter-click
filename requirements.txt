@@ -10,11 +10,11 @@ coverage==5.2
 python-coveralls==2.9.3
 # Testing
 # ------------------------------------------------------------------------------
-tox==3.16.1
+tox==3.17.1
 pytest==5.4.3
 pytest-cov==2.10.0
 pytest_cases==2.0.4
 pytest-cookies==0.5.1
 pytest-xdist==1.33.0
 pyyaml==5.3.1
-virtualenv==20.0.26
+virtualenv==20.0.27
