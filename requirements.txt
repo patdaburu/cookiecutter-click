@@ -13,7 +13,7 @@ python-coveralls==2.9.3
 tox==3.19.0
 pytest==6.0.1
 pytest-cov==2.10.0
-pytest_cases==2.1.1
+pytest_cases==2.1.2
 pytest-cookies==0.5.1
 pytest-xdist==1.34.0
 pyyaml==5.3.1
