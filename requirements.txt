@@ -15,6 +15,6 @@ pytest==6.0.1
 pytest-cov==2.10.1
 pytest_cases==2.2.1
 pytest-cookies==0.5.1
-pytest-xdist==2.0.0
+pytest-xdist==2.1.0
 pyyaml==5.3.1
 virtualenv==20.0.31
