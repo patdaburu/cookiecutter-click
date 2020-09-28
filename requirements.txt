@@ -11,7 +11,7 @@ python-coveralls==2.9.3
 # Testing
 # ------------------------------------------------------------------------------
 tox==3.20.0
-pytest==6.0.2
+pytest==6.1.0
 pytest-cov==2.10.1
 pytest_cases==2.2.2
 pytest-cookies==0.5.1
