@@ -1,14 +1,14 @@
 # Dependencies
 # -----------------------
+binaryornot
 cookiecutter
 sh
-binaryornot
 
 # Code quality
 # -----------------------
 black
-flake8
 coverage
+flake8
 python-coveralls
 
 # Testing
@@ -19,4 +19,5 @@ pytest_cases
 pytest-cookies
 pytest-xdist
 pyyaml
+tox
 virtualenv
