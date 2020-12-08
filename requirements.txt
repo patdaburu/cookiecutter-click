@@ -1,20 +1,23 @@
-cookiecutter==1.7.2
-sh==1.14.1
-binaryornot==0.4.4
+# Dependencies
+# -----------------------
+binaryornot
+cookiecutter
+sh
 
 # Code quality
-# ------------------------------------------------------------------------------
-black==20.8b1
-flake8==3.8.4
-coverage==5.3
-python-coveralls==2.9.3
+# -----------------------
+black
+coverage
+flake8
+python-coveralls
+
 # Testing
-# ------------------------------------------------------------------------------
-tox==3.20.1
-pytest==6.1.2
-pytest-cov==2.10.1
-pytest_cases==2.5.0
-pytest-cookies==0.5.1
-pytest-xdist==2.1.0
-pyyaml==5.3.1
-virtualenv==20.2.1
+# -----------------------
+pytest
+pytest-cov
+pytest_cases
+pytest-cookies
+pytest-xdist
+pyyaml
+tox
+virtualenv
