@@ -16,7 +16,7 @@ python-coveralls==2.9.3
 pytest==6.2.0
 pytest-cov==2.10.1
 pytest_cases==2.7.2
-pytest-cookies
+pytest-cookies==0.5.1
 pytest-xdist
 pyyaml
 tox
