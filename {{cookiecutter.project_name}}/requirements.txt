@@ -7,7 +7,7 @@ pylint
 flake8
 flake8-docstrings
 {%- endif %}
-pytest
+pytest==6.2.1
 pytest-cov
 pytest-pythonpath
 setuptools
