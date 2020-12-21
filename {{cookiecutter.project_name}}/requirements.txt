@@ -1,20 +1,19 @@
 click
 pip-check-reqs
 pip-licenses
-{% if cookiecutter.linter == "pylint" %}
+{%- if cookiecutter.linter == 'pylint' %}
 pylint
-{% endif %}
-{% if cookiecutter.linter == "flake8" %}
+{%- elif cookiecutter.linter == 'flake8' %}
 flake8
 flake8-docstrings
-{% endif %}
+{%- endif %}
 pytest
 pytest-cov
 pytest-pythonpath
 setuptools
 Sphinx
-{% if cookiecutter.sphinx_theme == "readthedocs" %}
+{%- if cookiecutter.sphinx_theme == 'readthedocs' %}
 sphinx-rtd-theme
-{% endif %}
+{%- endif %}
 tox
 twine
