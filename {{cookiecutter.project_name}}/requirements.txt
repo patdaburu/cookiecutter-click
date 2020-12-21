@@ -1,5 +1,5 @@
 click
-pip-check-reqs
+pip-check-reqs==2.1.1
 pip-licenses
 {%- if cookiecutter.linter == 'pylint' %}
 pylint
