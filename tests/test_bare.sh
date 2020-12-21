@@ -31,5 +31,8 @@ cd my_awesome_project
 # install project python deps
 install_python_deps
 
+# Output project for sanity
+ls -alt
+
 # run tests
 pytest
