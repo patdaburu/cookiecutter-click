@@ -2,7 +2,7 @@
 # -----------------------
 binaryornot
 cookiecutter
-sh
+sh==1.14.1
 
 # Code quality
 # -----------------------
