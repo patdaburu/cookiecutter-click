@@ -158,9 +158,13 @@ Would you like to learn more?  Check out the links below!
 
 This program was created by [Pat Daburu](https://github.com/patdaburu). 
 
-Project contributors can be found in the [CONTRIBUTORS](CONTRIBUTORS) file.
-
 This project is [hosted on GitHub](https://github.com/patdaburu/cookiecutter-click). Please feel free to submit pull requests.
+
+## Contributors
+
+| name        | github link                   |
+|-------------|-------------------------------|
+| Vlad Doster | https://github.com/vladdoster |
 
 ## License
 
