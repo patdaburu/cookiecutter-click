@@ -1,7 +1,7 @@
 # Dependencies
 # -----------------------
 binaryornot
-cookiecutter
+cookiecutter==1.7.2
 sh
 
 # Code quality
