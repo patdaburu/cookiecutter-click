@@ -13,7 +13,7 @@ pytest-pythonpath
 setuptools
 Sphinx
 {%- if cookiecutter.sphinx_theme == 'readthedocs' %}
-sphinx-rtd-theme
+sphinx-rtd-theme==0.5.0
 {%- endif %}
 tox
 twine
