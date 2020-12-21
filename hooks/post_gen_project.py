@@ -11,7 +11,7 @@ def remove_pylintrc_file():
     os.remove(".pylintrc")
     
 def remove_flake8_file():
-    os.remove(".pylintrc")
+    os.remove(".flake8")
 
 def main():
     linter = "{{ cookiecutter.linter }}".lower()
