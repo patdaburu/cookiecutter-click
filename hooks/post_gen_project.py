@@ -1,8 +1,5 @@
 #!/usr/bin/env python
-
 import os
-import random
-import shutil
 
 TERMINATOR = "\x1b[0m"
 WARNING = "\x1b[1;33m [WARNING]: "
@@ -11,10 +8,10 @@ HINT = "\x1b[3;33m"
 SUCCESS = "\x1b[1;32m [SUCCESS]: "
 
 def remove_pylintrc_file():
-    shutil.rmtree(".pylintrc")
+    os.remove(".pylintrc")
     
 def remove_flake8_file():
-    shutil.rmtree(".pylintrc")
+    os.remove(".pylintrc")
 
 def main():
     linter = "{{ cookiecutter.linter }}".lower()
