@@ -1,4 +1,4 @@
-click
+click==7.1.2
 pip-check-reqs
 pip-licenses
 {%- if cookiecutter.linter == 'pylint' %}
