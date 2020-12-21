@@ -1,0 +1,10 @@
+[flake8]
+docstring-convention=pep257
+ignore =
+    D400, # If you want to end lines with exclamation marks, why not?
+    E402, # Ignore import not being at top of test
+    F631, # Assertion is always true in test_example.py
+max-line-length = 160
+exclude =
+    venv,
+    setup.py

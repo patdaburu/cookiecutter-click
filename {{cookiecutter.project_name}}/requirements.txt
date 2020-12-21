@@ -1,14 +1,19 @@
-click>=7.0,<8
-pip-check-reqs>=2.0.1,<3
-pip-licenses==3.1.0
-{% if cookiecutter.linter == "pylint" %}pylint>=1.8.4,<2{% endif %}
-{% if cookiecutter.linter == "flake8" %}flake8>=3.7.9,<4{% endif %}
-{% if cookiecutter.linter == "flake8" %}flake8-docstrings>=1.5.0,<2{% endif %}
-pytest==6.1.2
-pytest-cov>=2.5.1,<3
-pytest-pythonpath>=0.7.2,<1
-setuptools>=38.4.0
-Sphinx>=2.2.0{% if cookiecutter.sphinx_theme == "readthedocs" %}
-sphinx-rtd-theme>=0.4.3,<1{% endif %}
-tox>=3.0.0,<4
-twine==3.2.0
+click
+pip-check-reqs
+pip-licenses
+{%- if cookiecutter.linter == 'pylint' %}
+pylint
+{%- elif cookiecutter.linter == 'flake8' %}
+flake8
+flake8-docstrings
+{%- endif %}
+pytest
+pytest-cov
+pytest-pythonpath
+setuptools
+Sphinx
+{%- if cookiecutter.sphinx_theme == 'readthedocs' %}
+sphinx-rtd-theme
+{%- endif %}
+tox
+twine
