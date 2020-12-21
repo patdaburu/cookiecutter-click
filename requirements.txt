@@ -1,6 +1,6 @@
 # Dependencies
 # -----------------------
-binaryornot
+binaryornot==0.4.4
 cookiecutter
 sh
 
