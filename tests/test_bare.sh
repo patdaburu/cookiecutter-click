@@ -1,23 +1,35 @@
-#!/bin/sh
-# this is a very simple script that tests the docker configuration for cookiecutter-django
-# it is meant to be run from the root directory of the repository, eg:
-# sh tests/test_docker.sh
+#!/usr/bin/env bash
+#
+# Tests the default configuration for cookiecutter-click
+# Run from the root directory of the repository
+# eg: ./tests/test_bard.sh
+#
 
 set -o errexit
 
-# install test requirements
-pip install -r requirements.txt
+# helper function
+install_python_deps() {
+  pip install --use-feature=2020-resolver \
+              --user \
+              --requirement requirements.txt
+}
 
-# create a cache directory
-mkdir -p .cache/bare
-cd .cache/bare
+# make clean python env
+pip install virtualenv
+python --module virtualenv venv
+source venv/bin/activate
 
-# create the project using the default settings in cookiecutter.json
-cookiecutter ../../ --no-input --overwrite-if-exists use_docker=n $@
+# install test deps
+install_python_deps
+
+# create project using cookiecutter.json default values
+cookiecutter --no-input \
+             --overwrite-if-exists use_docker=n \
+             $@
 cd my_awesome_project
 
-# Install Python deps
-pip install -r requirements.txt
+# install project python deps
+install_python_deps
 
-# run the project's tests
+# run tests
 pytest
