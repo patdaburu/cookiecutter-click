@@ -4,7 +4,7 @@ pip-licenses
 {%- if cookiecutter.linter == 'pylint' %}
 pylint
 {%- elif cookiecutter.linter == 'flake8' %}
-flake8
+flake8==3.8.4
 flake8-docstrings
 {%- endif %}
 pytest
