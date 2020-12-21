@@ -10,7 +10,7 @@ flake8-docstrings
 pytest
 pytest-cov
 pytest-pythonpath
-setuptools
+setuptools==51.1.0.post20201221
 Sphinx
 {%- if cookiecutter.sphinx_theme == 'readthedocs' %}
 sphinx-rtd-theme
