@@ -7,7 +7,7 @@ sh
 # Code quality
 # -----------------------
 black
-coverage
+coverage==5.3.1
 flake8
 python-coveralls
 
