@@ -20,4 +20,4 @@ pytest-cookies
 pytest-xdist
 pyyaml
 tox
-virtualenv
+virtualenv==20.2.2
