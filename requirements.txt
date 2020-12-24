@@ -16,7 +16,7 @@ python-coveralls
 pytest
 pytest-cov
 pytest_cases
-pytest-cookies
+pytest-cookies==0.5.1
 pytest-xdist
 pyyaml
 tox
