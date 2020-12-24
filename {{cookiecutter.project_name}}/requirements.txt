@@ -15,5 +15,5 @@ Sphinx
 {%- if cookiecutter.sphinx_theme == 'readthedocs' %}
 sphinx-rtd-theme
 {%- endif %}
-tox
+tox==3.20.1
 twine
