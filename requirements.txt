@@ -17,7 +17,7 @@ pytest
 pytest-cov
 pytest_cases
 pytest-cookies
-pytest-xdist
+pytest-xdist==2.2.0
 pyyaml
 tox
 virtualenv
