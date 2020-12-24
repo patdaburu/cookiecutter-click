@@ -9,7 +9,7 @@ sh
 black
 coverage
 flake8
-python-coveralls
+python-coveralls==2.9.3
 
 # Testing
 # -----------------------
