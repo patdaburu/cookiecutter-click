@@ -13,7 +13,7 @@ python-coveralls
 
 # Testing
 # -----------------------
-pytest
+pytest==6.2.1
 pytest-cov
 pytest_cases
 pytest-cookies
