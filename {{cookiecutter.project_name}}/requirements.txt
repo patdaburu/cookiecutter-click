@@ -5,7 +5,7 @@ pip-licenses
 pylint
 {%- elif cookiecutter.linter == 'flake8' %}
 flake8
-flake8-docstrings
+flake8-docstrings==1.5.0
 {%- endif %}
 pytest
 pytest-cov
