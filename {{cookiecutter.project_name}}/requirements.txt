@@ -9,7 +9,7 @@ flake8-docstrings
 {%- endif %}
 pytest
 pytest-cov
-pytest-pythonpath
+pytest-pythonpath==0.7.3
 setuptools
 Sphinx
 {%- if cookiecutter.sphinx_theme == 'readthedocs' %}
