@@ -11,7 +11,7 @@ pytest
 pytest-cov
 pytest-pythonpath
 setuptools
-Sphinx
+Sphinx==3.4.1
 {%- if cookiecutter.sphinx_theme == 'readthedocs' %}
 sphinx-rtd-theme
 {%- endif %}
