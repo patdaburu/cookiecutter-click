@@ -2,7 +2,7 @@ click
 pip-check-reqs
 pip-licenses
 {%- if cookiecutter.linter == 'pylint' %}
-pylint
+pylint==2.6.0
 {%- elif cookiecutter.linter == 'flake8' %}
 flake8
 flake8-docstrings
