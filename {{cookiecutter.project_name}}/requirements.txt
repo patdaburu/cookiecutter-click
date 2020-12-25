@@ -16,4 +16,4 @@ Sphinx
 sphinx-rtd-theme
 {%- endif %}
 tox
-twine
+twine==3.3.0
