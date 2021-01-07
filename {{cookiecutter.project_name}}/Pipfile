@@ -1,0 +1,29 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+click = "*"
+
+[dev-packages]
+pip-check-reqs = "*"
+pip-licenses = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-pythonpath = "*"
+{%- if cookiecutter.linter == 'pylint' %}
+pylint = "*"
+{%- elif cookiecutter.linter == 'flake8' %}
+flake8 = "*"
+flake8-docstrings = "*"
+{% endif %}
+tox = "*"
+twine = "*"
+Sphinx = "*"
+{%- if cookiecutter.sphinx_theme == 'readthedocs' %}
+sphinx-rtd-theme = "*"
+{%- endif %}
+
+[requires]
+python_version = "{{cookiecutter.python_version}}"

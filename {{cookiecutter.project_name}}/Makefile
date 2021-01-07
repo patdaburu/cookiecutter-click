@@ -10,7 +10,11 @@ SHELL = bash
 
 
 build:
-	pip install --editable .
+{% if cookiecutter.virtualenv == 'pipenv' %}
+	pipenv install --dev -e .
+{% else %}
+	python$(PY_VERSION) install --editable .
+{% endif %}
 
 run:
 	$(CLI_NAME) run
@@ -19,8 +23,11 @@ submit:
 	$(CLI_NAME) submit
 
 freeze:
-	pip freeze > requirements.txt
-
+{% if cookiecutter.virtualenv == 'pipenv' %}
+	pipenv lock -r > requirements.txt
+{% else %}
+	python$(PY_VERSION) -m pip freeze > requirements.txt
+{% endif %}
 lint:
 	$(LINTER) $(PROJ_SLUG)
 
@@ -56,6 +63,9 @@ clean :
 	coverage erase
 
 venv :
+{% if cookiecutter.virtualenv == 'pipenv' %}
+	pipenv shell
+{% endif %}
 {% if cookiecutter.virtualenv == 'virtualenv' %}
 	virtualenv --python python$(PY_VERSION) venv
 {% endif %}
@@ -65,7 +75,11 @@ venv :
 {% endif %}
 
 install:
+{% if cookiecutter.virtualenv == 'pipenv' %}
+	pipenv install --dev
+{% else %}
 	pip install -r requirements.txt
+{% endif %}
 
 licenses:
 	pip-licenses --with-url --format=rst \

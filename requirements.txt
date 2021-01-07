@@ -1,5 +1,6 @@
 # Dependencies
 # -----------------------
+pipenv
 binaryornot
 cookiecutter
 sh

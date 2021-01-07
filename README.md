@@ -59,11 +59,13 @@ Select python_version:
 1 - 3.6
 2 - 3.7
 3 - 3.8
+4 - 3.9
 Choose from 1, 2, 3 (1, 2, 3) [1]: 1
 Select virtualenv:
-1 - virtualenv
-2 - python3
-Choose from 1, 2 (1, 2) [1]: 1
+1 - python3
+2 - virtualenv
+3 - pipenv
+Choose from 1, 2, 3 (1, 2, 3) [1]: 1
 Select linter:
 1 - flake8
 2 - pylint
@@ -161,7 +163,7 @@ This project is [hosted on GitHub](https://github.com/patdaburu/cookiecutter-cli
 ## Contributors
 
 | name        | github link                   |
-|-------------|-------------------------------|
+| ----------- | ----------------------------- |
 | Vlad Doster | https://github.com/vladdoster |
 
 ## License

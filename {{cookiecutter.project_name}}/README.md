@@ -31,6 +31,7 @@ Below are some handy resource links.
 * [Sphinx](http://www.sphinx-doc.org/en/master/) is a tool that makes it easy to create intelligent and beautiful documentation, written by Geog Brandl and licnsed under the BSD license.
 * [pytest](https://docs.pytest.org/en/latest/) helps you write better programs.
 * [GNU Make](https://www.gnu.org/software/make/) is a tool which controls the generation of executables and other non-source files of a program from the program's source files.
+* [pipenv](https://pipenv.pypa.io/en/latest/) is a tool that aims to bring the best of all the packaging worlds to the Python world and automatically creates and manages virtualenv for your projects.
 
 
 ## Authors
