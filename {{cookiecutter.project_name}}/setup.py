@@ -18,7 +18,7 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the relevant file
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with open(path.join(here, "README.rst"), encoding="utf-8") as f:
     long_description = f.read()
 
 # Get the base version from the library.  (We'll find it in the `version.py`
@@ -26,30 +26,26 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 vspec = importlib.util.spec_from_file_location(
   "version",
   str(Path(__file__).resolve().parent /
-      '{{cookiecutter.package_name}}'/"version.py")
+      "{{cookiecutter.package_name}}"/"version.py")
 )
 vmod = importlib.util.module_from_spec(vspec)
 vspec.loader.exec_module(vmod)
-version = getattr(vmod, '__version__')
+version = getattr(vmod, "__version__")
 
 # If the environment has a build number set...
-if os.getenv('buildnum') is not None:
+if os.getenv("buildnum") is not None:
     # ...append it to the version.
-    version = "{version}.{buildnum}".format(
-        version=version,
-        buildnum=os.getenv('buildnum')
-    )
+    version = f"{version}.{os.getenv('buildnum')}"
 
 setup(
     name='{{cookiecutter.project_name}}',
     description="{{cookiecutter.project_description}}",
     long_description=long_description,
-    packages=find_packages(
-        exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
+    packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     version=version,
     install_requires=[
         # Include dependencies here
-        'click>=7.0,<8'
+        "click>=7.0,<8"
     ],
     entry_points="""
     [console_scripts]
@@ -74,21 +70,21 @@ setup(
       #   3 - Alpha
       #   4 - Beta
       #   5 - Production/Stable
-      'Development Status :: 3 - Alpha',
+      "Development Status :: 3 - Alpha",
 
       # Indicate who your project is intended for.
-      'Intended Audience :: Developers',
-      'Topic :: Software Development :: Libraries',
+      "Intended Audience :: Developers",
+      "Topic :: Software Development :: Libraries",
 
       # Pick your license.  (It should match "license" above.)
       {% if cookiecutter.license != 'None' %}  # noqa
-      '''License :: OSI Approved :: {{cookiecutter.license}} License''',
+      """License :: OSI Approved :: {{cookiecutter.license}} License""",
       {% else %}
-      '''License :: OSI Approved :: <Your Preferred License>''',  # noqa
+      """License :: OSI Approved :: <Your Preferred License>""",  # noqa
       {%endif%}  # noqa
       # Specify the Python versions you support here. In particular, ensure
       # that you indicate whether you support Python 2, Python 3 or both.
-      'Programming Language :: Python :: {{cookiecutter.python_version}}',
+      "Programming Language :: Python :: {{cookiecutter.python_version}}",
     ],
     include_package_data=True
 )
