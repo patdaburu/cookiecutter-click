@@ -1,21 +1,24 @@
 {
-  "project_name": "ClickCLI",
+  "project_name": "Click CLI tool",
   "package_name": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') }}",
   "cli_name": "{{ cookiecutter.package_name }}",
-  "project_version": "0.0.1",
-  "project_description": "This is my click command-line app project.",
+  "project_version": "0.1.0",
+  "project_description": "A CLI tool built with click.",
   "python_version": [
     "3.6",
     "3.7",
-    "3.8"
+    "3.8",
+    "3.9"
   ],
   "virtualenv": [
+    "python3",
     "virtualenv",
-    "python3"
+    "pipenv"
   ],
   "linter": [
+    "black",
     "flake8",
-    "pylint"
+    "pylint",
   ],
   "sphinx_theme": [
     "alabaster",
@@ -28,11 +31,11 @@
   "author_name": "my_name",
   "author_email": "my_email@gmail.com",
   "license": [
-    "MIT",
+    "Apache Software License 2.0",
     "BSD",
     "GPLv3",
-    "Apache Software License 2.0",
+    "MIT",
     "None"
   ],
-  "github_user": "my_github_username"
+  "github_user": "github_username"
 }

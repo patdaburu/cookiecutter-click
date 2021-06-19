@@ -1,19 +1,24 @@
 click
 pip-check-reqs
 pip-licenses
-{%- if cookiecutter.linter == 'pylint' %}
-pylint
-{%- elif cookiecutter.linter == 'flake8' %}
-flake8
-flake8-docstrings
-{%- endif %}
 pytest
 pytest-cov
 pytest-pythonpath
 setuptools
-Sphinx
+sphinx
+tox
+twine
+{%- if cookiecutter.linter == 'pylint' %}
+pylint
+{%- elif cookiecutter.linter == 'yapf' %}
+yapf
+{%- elif cookiecutter.linter == 'flake8' %}
+flake8
+flake8-docstrings
+{%- elif cookiecutter.linter == 'black' %}
+black
+{%- endif %}
 {%- if cookiecutter.sphinx_theme == 'readthedocs' %}
 sphinx-rtd-theme
 {%- endif %}
-tox
-twine
+
