@@ -1,9 +1,10 @@
 {
-  "project_name": "Click CLI tool",
+
+  "project_name": "click-cli-tool",
   "package_name": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') }}",
   "cli_name": "{{ cookiecutter.package_name }}",
   "project_version": "0.1.0",
-  "project_description": "A CLI tool built with click.",
+  "project_description": "A CLI tool built using Click.",
   "python_version": [
     "3.6",
     "3.7",
@@ -19,6 +20,7 @@
     "black",
     "flake8",
     "pylint",
+    "yapf"
   ],
   "sphinx_theme": [
     "alabaster",
