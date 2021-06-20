@@ -4,23 +4,19 @@ import os, subprocess
 TERMINATOR = "\x1b[0m"
 SUCCESS = "\x1b[1;32m [SUCCESS]: "
 
-def remove_file(f_name):
-    os.remove(f_name)
 
 def main():
     linter = "{{ cookiecutter.linter }}".lower()
-    if linter != "flake8":
-        remove_file(".flake8")
-    if linter != "pylint":
-        remove_file(".pylintrc")
+    if linter == "flake8":
+        os.remove(".pylintrc")
+    if linter == "pylint":
+        os.remove(".flake8")
 
     venv = "{{ cookiecutter.virtualenv }}".lower()
-    if venv == "pipenv":
-        subprocess.run(["pip3", "install", "pipenv"])
-    if venv == "virtualenv":
-        subprocess.run(["pip3", "install", "virtualenv"])
+    if venv != "venv":
+        subprocess.run(["pip3", "install", "--user", venv])
 
-    print(f"{SUCCESS} Project initialized, keep up the good work!{TERMINATOR}")
+    print(f"{SUCCESS} CLI tool initialized, keep up the good work!{TERMINATOR}")
 
 
 if __name__ == "__main__":

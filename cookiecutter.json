@@ -4,7 +4,7 @@
   "package_name": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') }}",
   "cli_name": "{{ cookiecutter.package_name }}",
   "project_version": "0.1.0",
-  "project_description": "A CLI tool built using Click.",
+  "project_description": "A CLI tool using Click.",
   "python_version": [
     "3.6",
     "3.7",
@@ -12,32 +12,33 @@
     "3.9"
   ],
   "virtualenv": [
-    "python3",
-    "virtualenv",
-    "pipenv"
+    "Venv",
+    "Pipenv",
+    "Virtualenv"
   ],
   "linter": [
-    "black",
-    "flake8",
-    "pylint",
-    "yapf"
+    "Black",
+    "Flake8",
+    "Pylint",
+    "Yapf",
+    "None"
   ],
   "sphinx_theme": [
-    "alabaster",
-    "readthedocs"
+    "Alabaster",
+    "Readthedocs"
   ],
   "auto_readme": [
     "None",
-    "pandoc"
+    "Pandoc"
   ],
-  "author_name": "my_name",
-  "author_email": "my_email@gmail.com",
+  "author_name": "your_name",
+  "author_email": "your_email@email.com",
   "license": [
-    "Apache Software License 2.0",
-    "BSD",
-    "GPLv3",
     "MIT",
-    "None"
+    "GPLv3",
+    "BSD",
+    "Apache Software License 2.0",
+    "No License"
   ],
-  "github_user": "github_username"
+  "github_user": "your_github_username"
 }
