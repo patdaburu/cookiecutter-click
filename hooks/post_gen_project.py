@@ -14,7 +14,7 @@ def main():
 
     venv = "{{ cookiecutter.virtualenv }}".lower()
     if venv != "venv":
-        subprocess.run(["pip3", "install", "--user", venv])
+        subprocess.run(["pip3", "install", "--user", venv], check=True)
 
     print(f"{SUCCESS} CLI tool initialized, keep up the good work!{TERMINATOR}")
 
